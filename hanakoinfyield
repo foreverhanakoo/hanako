@@ -6502,7 +6502,7 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/foreverhanakoo/hanako/refs/heads/main/infiniteyield(modified)'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/foreverhanakoo/hanako/refs/heads/main/hanakoinfyield'))()")
 	end
 end)
 
@@ -11021,6 +11021,7 @@ addcmd('fireproximityprompts',{'firepp'},function(args, speaker)
 end)
 
 local PromptButtonHoldBegan = nil
+
 addcmd('instantproximityprompts',{'instantpp'},function(args, speaker)
 	if fireproximityprompt then
 		execCmd("uninstantproximityprompts")
