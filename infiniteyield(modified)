@@ -1,7 +1,5 @@
 -- This version of Infinite Yield have been modified by me. For the original version please use "loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()".
 
-
-
 if IY_LOADED and not _G.IY_DEBUG then
 	-- error("Infinite Yield is already running!", 0)
 	return
