@@ -4888,7 +4888,7 @@ CMDs[#CMDs + 1] = {NAME = 'removeplugin / deleteplugin [name]', DESC = 'Remove a
 CMDs[#CMDs + 1] = {NAME = 'reloadplugin [name]', DESC = 'Reloads a plugin'}
 CMDs[#CMDs + 1] = {NAME = 'addallplugins / loadallplugins', DESC = 'Adds all available plugins from the workspace folder'}
 CMDs[#CMDs + 1] = {NAME = 'raelhub', DESC = "Open Rael's Hub (For The Mimic Autocomplete)"}
-CMDs[#CMDs + 1] = {NAME = 'themimicfly', DESC = "Similar to normal fly but bypasses The Mimic's Antifly"}
+CMDs[#CMDs + 1] = {NAME = 'themimicfly', DESC = "Similar to normal fly but bypasses The Mimic's antifly"}
 
 -- wait()
 
@@ -13073,6 +13073,10 @@ end)
 
 addcmd("raelhub", {}, function(args, speaker)
 	loadstring(game:HttpGet"https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt")()
+end)
+
+addcmd("themimicfly", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/hanako/refs/heads/main/flytest")()
 end)
 
 if IsOnMobile then
