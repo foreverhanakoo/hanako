@@ -4888,6 +4888,23 @@ CMDs[#CMDs + 1] = {NAME = 'removeplugin / deleteplugin [name]', DESC = 'Remove a
 CMDs[#CMDs + 1] = {NAME = 'reloadplugin [name]', DESC = 'Reloads a plugin'}
 CMDs[#CMDs + 1] = {NAME = 'addallplugins / loadallplugins', DESC = 'Adds all available plugins from the workspace folder'}
 CMDs[#CMDs + 1] = {NAME = 'themimic', DESC = 'Opens a 3rd party script by Rael Hub (They also support other experiences)'}
+CMDs[#CMDs + 1] = {NAME = 'b1c1p1', DESC = 'Teleports you to Book 1 Chapter 1 Part 1 (Must be in The Mimic to use this.)'}
+-- reserved to b1nm1p1
+CMDs[#CMDs + 1] = {NAME = 'b1c1p2', DESC = 'Teleports you to Book 1 Chapter 1 Part 2 (Must be in The Mimic to use this.)'}
+-- reserved for b1nm1p2
+CMDs[#CMDs + 1] = {NAME = 'b1c2p1', DESC = 'Teleports you to Book 1 Chapter 2 Part 1 (Must be in The Mimic to use this.)'}
+--reserved for b1nm2p1
+CMDs[#CMDs + 1] = {NAME = 'b1c2p2', DESC = 'Teleports you to Book 1 Chapter 2 Part 2 (Must be in The Mimic to use this.)'}
+--reserved for b1nm2p2
+CMDs[#CMDs + 1] = {NAME = 'b1c2p3', DESC = 'Teleports you to Book 1 Chapter 2 Part 3 (Must be in The Mimic to use this.)'}
+--reserved for b1nm2p3
+CMDs[#CMDs + 1] = {NAME = 'b1c3p1', DESC = 'Teleports you to Book 1 Chapter 3 Part 1 (Must be in The Mimic to use this.)'}
+--reserved for b1nm3p1
+CMDs[#CMDs + 1] = {NAME = 'b1c3p2', DESC = 'Teleports you to Book 1 Chapter 3 Part 2 (Must be in The Mimic to use this.)'}
+--reserved for b1nm3p2
+CMDs[#CMDs + 1] = {NAME = 'b1c3p3', DESC = 'Teleports you to Book 1 Chapter 3 Part 3 (Must be in The Mimic to use this.)'}
+-- reserved for b1nm3p3
+
 -- wait()
 
 for i = 1, #CMDs do
@@ -13071,6 +13088,46 @@ end)
 
 addcmd("themimic", {}, function(args, speaker)
 	loadstring(game:HttpGet"https://raw.githubusercontent.com/Laelmano24/Rael-Hub/main/main.txt")()
+end)
+
+addcmd("b1c1p1", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c1p1")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 1 Part 1")
+end)
+
+addcmd("b1c1p2", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c1p2")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 1 Part 2")
+end)
+
+addcmd("b1c2p1", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c2p1")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 2 Part 1")
+end)
+
+addcmd("b1c2p2", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c2p2")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 2 Part 2")
+end)
+
+addcmd("b1c2p3", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c2p3")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 2 Part 3")
+end)
+
+addcmd("b1c3p1", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c3p1")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 3 Part 1")
+end)
+
+addcmd("b1c3p2", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c3p2")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 3 Part 2")
+end)
+
+addcmd("b1c3p3", {}, function(args, speaker)
+	loadstring(game:HttpGet"https://raw.githubusercontent.com/foreverhanakoo/themimicteleports/refs/heads/main/b1c3p3")()
+	notify('Teleporting',"Teleporting to Book 1 Chapter 3 Part 3")
 end)
 
 if IsOnMobile then
