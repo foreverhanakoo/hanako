@@ -16,14 +16,14 @@ local v3 = bit32 or bit;
 local v4 = v3.bxor;
 local v5 = table.concat;
 local v6 = table.insert;
-local function v7(v70, v71)
-	local v72 = {};
-	for v127 = 1, #v70 do
-		v6(v72, v0(v4(v1(v2(v70, v127, v127 + 1)), v1(v2(v71, 1 + (v127 % #v71), 1 + (v127 % #v71) + 1))) % 256));
+local function v7(v73, v74)
+	local v75 = {};
+	for v132 = 1, #v73 do
+		v6(v75, v0(v4(v1(v2(v73, v132, v132 + 1)), v1(v2(v74, 1 + (v132 % #v74), 1 + (v132 % #v74) + 1))) % 256));
 	end
-	return v5(v72);
+	return v5(v75);
 end
-wait(5);
+wait(1204 - (1026 + 173));
 local v8 = game.Players.LocalPlayer;
 local v9 = v8:GetMouse();
 local v10 = game:GetService(v7("\228\208\222\55\207\181\215\11\197\240\222\55\240\178\196\27", "\126\177\163\187\69\134\219\167"));
@@ -35,407 +35,412 @@ local v15 = Instance.new(v7("\122\65\18\32\76\76\39\48\64", "\69\41\34\96"));
 v15.Name = v7("\136\203\210\74\47\34\177\202\212\74\47\46\177\204\197\3\7\56", "\75\220\163\183\106\98");
 v15.Parent = v8:WaitForChild(v7("\50\182\138\46\220\16\157\158\62", "\185\98\218\235\87"));
 local v18 = Instance.new(v7("\237\46\38\235\219", "\202\171\92\71\134\190"), v15);
-v18.Size = UDim2.new(1769 - (1749 + 20), 155 + 495, 1322 - (1249 + 73), 150 + 270);
-v18.Position = UDim2.new(0.5, -(1470 - (466 + 679)), 2 - 1, 286 - 186);
-v18.BackgroundColor3 = Color3.fromRGB(2155 - (106 + 1794), 81 + 174, 255);
-v18.BackgroundTransparency = 1 + 0;
+v18.Size = UDim2.new(0, 650, 0 - 0, 485 - (30 + 35));
+v18.Position = UDim2.new(0.5 + 0, -325, 1, 1357 - (1043 + 214));
+v18.BackgroundColor3 = Color3.fromRGB(963 - 708, 255, 255);
+v18.BackgroundTransparency = 1;
 Instance.new(v7("\28\232\15\135\59\207\41\154", "\232\73\161\76"), v18);
-task.wait(0.2 - 0);
-v14:Create(v18, TweenInfo.new(0.6 - 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {[v7("\139\214\81\84\10\178\214\76", "\126\219\185\34\61")]=UDim2.new(114.5 - (4 + 110), -325, 0.5, -(794 - (57 + 527))),[v7("\46\207\93\121\121\101\252\242\2\202\106\96\127\121\224\247\13\220\91\124\125\110", "\135\108\174\62\18\30\23\147")]=(1427 - (41 + 1386))}):Play();
+task.wait(1212.2 - (323 + 889));
+v14:Create(v18, TweenInfo.new(0.6 - 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {[v7("\139\214\81\84\10\178\214\76", "\126\219\185\34\61")]=UDim2.new(580.5 - (361 + 219), -(645 - (53 + 267)), 0.5, -210),[v7("\46\207\93\121\121\101\252\242\2\202\106\96\127\121\224\247\13\220\91\124\125\110", "\135\108\174\62\18\30\23\147")]=(0 + 0)}):Play();
 local v23 = false;
 local v24;
 local v25;
 local v26;
-local function v27(v73)
-	local v74 = v73.Position - v25;
-	v18.Position = UDim2.new(v26.X.Scale, v26.X.Offset + v74.X, v26.Y.Scale, v26.Y.Offset + v74.Y);
-end
-v18.InputBegan:Connect(function(v76)
-	if (v76.UserInputType == Enum.UserInputType.MouseButton1) then
-		local v138 = 0;
-		while true do
-			if (v138 == (104 - (17 + 86))) then
-				v26 = v18.Position;
-				v76.Changed:Connect(function()
-					if (v76.UserInputState == Enum.UserInputState.End) then
-						v23 = false;
-					end
-				end);
-				break;
-			end
-			if (v138 == 0) then
-				v23 = true;
-				v25 = v76.Position;
-				v138 = 1 + 0;
-			end
-		end
-	end
-end);
-v18.InputChanged:Connect(function(v77)
-	if (v77.UserInputType == Enum.UserInputType.MouseMovement) then
-		v24 = v77;
-	end
-end);
-v10.InputChanged:Connect(function(v78)
-	if ((v78 == v24) and v23) then
-		v27(v78);
-	end
-end);
-local v28 = Instance.new(v7("\130\236\50\223\52\175\49\194\186", "\167\214\137\74\171\120\206\83"), v18);
-v28.Size = UDim2.new(1, 0 - 0, 0 - 0, 216 - (122 + 44));
-v28.Position = UDim2.new(0 - 0, 0, 0, 0 - 0);
-v28.Text = v7("\191\248\55\29\213\174\134\249\49\29\213\162\134\255\32\84\253\180", "\199\235\144\82\61\152");
-v28.Font = Enum.Font.GothamBold;
-v28.TextSize = 28;
-v28.BackgroundTransparency = 1 + 0;
-v28.TextColor3 = Color3.fromRGB(0 + 0, 0 - 0, 0);
-local v37 = Instance.new(v7("\33\4\184\38\2", "\75\103\118\217"), v18);
-v37.Size = UDim2.new(65 - (30 + 35), 104 + 46, 1, -(1307 - (1043 + 214)));
-v37.Position = UDim2.new(0 - 0, 1212 - (323 + 889), 0, 134 - 84);
-v37.BackgroundColor3 = Color3.fromRGB(825 - (361 + 219), 565 - (53 + 267), 245);
-Instance.new(v7("\242\125\83\27\171\16\194\70", "\126\167\52\16\116\217"), v37);
-local v41 = {};
-local function v42(v79, v80)
-	local v81 = 0 + 0;
-	local v82;
-	local v83;
+local function v27(v76)
+	local v77 = 413 - (15 + 398);
+	local v78;
 	while true do
-		if (0 == v81) then
-			v82 = Instance.new(v7("\252\43\56\148\150\12\232\220\33\46", "\156\168\78\64\224\212\121"), v37);
-			v82.Size = UDim2.new(414 - (15 + 398), 982 - (18 + 964), 0, 188 - 138);
-			v82.Position = UDim2.new(0 + 0, 0 + 0, 850 - (20 + 830), (v80 - 1) * 50);
-			v81 = 1 + 0;
+		if (v77 == (982 - (18 + 964))) then
+			v78 = v76.Position - v25;
+			v18.Position = UDim2.new(v26.X.Scale, v26.X.Offset + v78.X, v26.Y.Scale, v26.Y.Offset + v78.Y);
+			break;
 		end
-		if (v81 == (129 - (116 + 10))) then
-			v83.Size = UDim2.new(1 + 0, -(908 - (542 + 196)), 1 - 0, -(21 + 49));
-			v83.Position = UDim2.new(0 + 0, 58 + 102, 0, 60);
-			v83.BackgroundTransparency = 2 - 1;
-			v81 = 9 - 5;
-		end
-		if (v81 == (1553 - (1126 + 425))) then
-			v82.BackgroundColor3 = Color3.fromRGB(255, 660 - (118 + 287), 999 - 744);
-			Instance.new(v7("\50\199\134\193\21\224\160\220", "\174\103\142\197"), v82);
-			v83 = Instance.new(v7("\112\58\94\53\32", "\152\54\72\63\88\69\62"), v18);
-			v81 = 1124 - (118 + 1003);
-		end
-		if (v81 == 5) then
-			return v83;
-		end
-		if (v81 == (11 - 7)) then
-			v83.Visible = false;
-			v82.MouseButton1Click:Connect(function()
-				local v188 = 377 - (142 + 235);
-				local v189;
+	end
+end
+v18.InputBegan:Connect(function(v79)
+	if (v79.UserInputType == Enum.UserInputType.MouseButton1) then
+		local v141 = 0 - 0;
+		local v142;
+		while true do
+			if ((0 + 0) == v141) then
+				v142 = 0 + 0;
 				while true do
-					if (v188 == (0 - 0)) then
-						v189 = 0 + 0;
-						while true do
-							if ((977 - (553 + 424)) == v189) then
-								for v232, v233 in pairs(v41) do
-									v233.Visible = false;
-								end
-								v83.Visible = true;
-								break;
+					if ((850 - (20 + 830)) == v142) then
+						v23 = true;
+						v25 = v79.Position;
+						v142 = 1;
+					end
+					if (v142 == (1 + 0)) then
+						v26 = v18.Position;
+						v79.Changed:Connect(function()
+							if (v79.UserInputState == Enum.UserInputState.End) then
+								v23 = false;
 							end
-						end
+						end);
 						break;
 					end
 				end
-			end);
-			v41[v79] = v83;
-			v81 = 5;
+				break;
+			end
 		end
-		if (v81 == (1 - 0)) then
-			local v184 = 0 + 0;
-			while true do
-				if (v184 == 1) then
-					v82.TextSize = 20 + 0;
-					v81 = 2 + 0;
-					break;
+	end
+end);
+v18.InputChanged:Connect(function(v80)
+	if (v80.UserInputType == Enum.UserInputType.MouseMovement) then
+		v24 = v80;
+	end
+end);
+v10.InputChanged:Connect(function(v81)
+	if ((v81 == v24) and v23) then
+		v27(v81);
+	end
+end);
+local v28 = Instance.new(v7("\130\236\50\223\52\175\49\194\186", "\167\214\137\74\171\120\206\83"), v18);
+v28.Size = UDim2.new(127 - (116 + 10), 0, 0 + 0, 788 - (542 + 196));
+v28.Position = UDim2.new(0, 0 - 0, 0 + 0, 0 + 0);
+v28.Text = v7("\191\248\55\29\213\174\134\249\49\29\213\162\134\255\32\84\253\180", "\199\235\144\82\61\152");
+v28.Font = Enum.Font.GothamBold;
+v28.TextSize = 11 + 17;
+v28.BackgroundTransparency = 1;
+v28.TextColor3 = Color3.fromRGB(0 - 0, 0, 0 - 0);
+local v37 = Instance.new(v7("\33\4\184\38\2", "\75\103\118\217"), v18);
+v37.Size = UDim2.new(0, 1701 - (1126 + 425), 406 - (118 + 287), -(195 - 145));
+v37.Position = UDim2.new(0, 1121 - (118 + 1003), 0 - 0, 427 - (142 + 235));
+v37.BackgroundColor3 = Color3.fromRGB(245, 1111 - 866, 54 + 191);
+Instance.new(v7("\242\125\83\27\171\16\194\70", "\126\167\52\16\116\217"), v37);
+local v41 = {};
+local function v42(v82, v83)
+	local v84 = 977 - (553 + 424);
+	local v85;
+	local v86;
+	while true do
+		local v133 = 0;
+		while true do
+			if (v133 == (1 - 0)) then
+				if (v84 == 1) then
+					v85.Text = v82;
+					v85.Font = Enum.Font.GothamBold;
+					v85.TextSize = 20;
+					v84 = 2 + 0;
 				end
-				if (v184 == (0 + 0)) then
-					v82.Text = v79;
-					v82.Font = Enum.Font.GothamBold;
-					v184 = 1;
+				if ((5 + 0) == v84) then
+					return v86;
 				end
+				v133 = 2;
+			end
+			if (v133 == 0) then
+				if ((2 + 0) == v84) then
+					v85.BackgroundColor3 = Color3.fromRGB(255, 109 + 146, 146 + 109);
+					Instance.new(v7("\50\199\134\193\21\224\160\220", "\174\103\142\197"), v85);
+					v86 = Instance.new(v7("\112\58\94\53\32", "\152\54\72\63\88\69\62"), v18);
+					v84 = 6 - 3;
+				end
+				if (v84 == (11 - 7)) then
+					v86.Visible = false;
+					v85.MouseButton1Click:Connect(function()
+						local v203 = 0 - 0;
+						while true do
+							if (v203 == (0 + 0)) then
+								for v223, v224 in pairs(v41) do
+									v224.Visible = false;
+								end
+								v86.Visible = true;
+								break;
+							end
+						end
+					end);
+					v41[v82] = v86;
+					v84 = 24 - 19;
+				end
+				v133 = 754 - (239 + 514);
+			end
+			if (v133 == (1 + 1)) then
+				if (v84 == (1332 - (797 + 532))) then
+					v86.Size = UDim2.new(1 + 0, -170, 1 + 0, -(164 - 94));
+					v86.Position = UDim2.new(0, 1362 - (373 + 829), 731 - (476 + 255), 1190 - (369 + 761));
+					v86.BackgroundTransparency = 1 + 0;
+					v84 = 6 - 2;
+				end
+				if (v84 == (0 - 0)) then
+					v85 = Instance.new(v7("\252\43\56\148\150\12\232\220\33\46", "\156\168\78\64\224\212\121"), v37);
+					v85.Size = UDim2.new(239 - (64 + 174), 0 + 0, 0 - 0, 381 - (144 + 192));
+					v85.Position = UDim2.new(0, 216 - (42 + 174), 0 + 0, (v83 - (1 + 0)) * (20 + 25));
+					v84 = 1;
+				end
+				break;
 			end
 		end
 	end
 end
 local v43 = v42(v7("\247\204\239\76\192\193\252\28\133", "\60\180\164\142"), 1);
-local v44 = v42(v7("\123\86\4\57\51\232\0\24\12", "\114\56\62\101\73\71\141"), 2 + 0);
-local v45 = v42(v7("\155\225\218\212\172\236\201\132\235", "\164\216\137\187"), 6 - 3);
+local v44 = v42(v7("\123\86\4\57\51\232\0\24\12", "\114\56\62\101\73\71\141"), 2);
+local v45 = v42(v7("\155\225\218\212\172\236\201\132\235", "\164\216\137\187"), 1507 - (363 + 1141));
 local v46 = v42(v7("\241\238\48\162\178\251\25\146\178", "\107\178\134\81\210\198\158"), 4);
-local v47 = v42(v7("\21\7\145\197", "\202\88\110\226\166"), 13 - 8);
+local v47 = v42(v7("\12\6\135\134\157\49\26\129\206\234\12\28\139\199\166\43", "\202\88\110\226\166"), 1585 - (1183 + 397));
+local v48 = v42(v7("\224\7\144\254\217\215\2\131\228\138\247\29\139\246\198\208", "\170\163\111\226\151"), 18 - 12);
+local v49 = v42(v7("\57\49\190\52\65\32\44\20\62\242\12\92\62\40\29\35", "\73\113\80\210\88\46\87"), 6 + 1);
+local v50 = v42(v7("\172\37\222\17", "\135\225\76\173\114"), 6 + 2);
 v43.Visible = true;
-local function v49(v84, v85, v86, v87)
-	local v88 = 0 - 0;
-	local v89;
+local function v52(v87, v88, v89, v90)
+	local v91 = Instance.new(v7("\46\232\160\164\142\168\179\14\226\182", "\199\122\141\216\208\204\221"), v87);
+	v91.Size = UDim2.new(1976 - (1913 + 62), -20, 0, 26 + 14);
+	v91.Position = UDim2.new(0 - 0, 1943 - (565 + 1368), 0 - 0, v89);
+	v91.Text = v88;
+	v91.Font = Enum.Font.GothamBold;
+	v91.TextSize = 1683 - (1477 + 184);
+	v91.BackgroundColor3 = Color3.fromRGB(346 - 91, 255, 238 + 17);
+	Instance.new(v7("\152\244\51\255\106\248\168\207", "\150\205\189\112\144\24"), v91);
+	v91.MouseButton1Click:Connect(v90);
+	return v91;
+end
+local function v53(v99, v100, v101)
+	local v102 = 0;
+	local v103;
 	while true do
-		local v128 = 0;
-		while true do
-			if (v128 == (1 + 1)) then
-				if (v88 == (0 - 0)) then
-					local v212 = 753 - (239 + 514);
-					while true do
-						if (v212 == 0) then
-							v89 = Instance.new(v7("\247\10\154\227\232\214\27\150\248\196", "\170\163\111\226\151"), v84);
-							v89.Size = UDim2.new(1, -(8 + 12), 1329 - (797 + 532), 40);
-							v212 = 1 + 0;
-						end
-						if (v212 == (1 + 0)) then
-							v88 = 2 - 1;
-							break;
-						end
-					end
-				end
-				break;
-			end
-			if ((1202 - (373 + 829)) == v128) then
-				if ((733 - (476 + 255)) == v88) then
-					v89.Font = Enum.Font.GothamBold;
-					v89.TextSize = 22;
-					v88 = 1133 - (369 + 761);
-				end
-				if (v88 == 1) then
-					v89.Position = UDim2.new(0 + 0, 18 - 8, 0 - 0, v86);
-					v89.Text = v85;
-					v88 = 240 - (64 + 174);
-				end
-				v128 = 1;
-			end
-			if (v128 == 1) then
-				if (v88 == 3) then
-					v89.BackgroundColor3 = Color3.fromRGB(37 + 218, 377 - 122, 591 - (144 + 192));
-					Instance.new(v7("\36\25\145\55\92\57\44\3", "\73\113\80\210\88\46\87"), v89);
-					v88 = 220 - (42 + 174);
-				end
-				if (v88 == (4 + 0)) then
-					local v219 = 0 + 0;
-					while true do
-						if (v219 == 0) then
-							v89.MouseButton1Click:Connect(v87);
-							return v89;
-						end
-					end
-				end
-				v128 = 1 + 1;
-			end
+		if (v102 == 4) then
+			v103.TextColor3 = Color3.fromRGB(856 - (564 + 292), 0 - 0, 0 - 0);
+			return v103;
+		end
+		if (v102 == 2) then
+			v103.Font = Enum.Font.GothamBold;
+			v103.TextSize = 328 - (244 + 60);
+			v102 = 3;
+		end
+		if (v102 == 3) then
+			v103.TextXAlignment = Enum.TextXAlignment.Left;
+			v103.BackgroundTransparency = 1;
+			v102 = 4;
+		end
+		if (v102 == 1) then
+			v103.Position = UDim2.new(0 + 0, 10, 476 - (41 + 435), v101);
+			v103.Text = v100;
+			v102 = 1003 - (938 + 63);
+		end
+		if (v102 == 0) then
+			v103 = Instance.new(v7("\17\129\167\88\40\137\19\21\41", "\112\69\228\223\44\100\232\113"), v99);
+			v103.Size = UDim2.new(1 + 0, -20, 0, 35);
+			v102 = 1126 - (936 + 189);
 		end
 	end
 end
-local function v50(v90, v91, v92)
-	local v93 = Instance.new(v7("\181\41\213\6\203\128\46\200\30", "\135\225\76\173\114"), v90);
-	v93.Size = UDim2.new(1505 - (363 + 1141), -(1600 - (1183 + 397)), 0, 35);
-	v93.Position = UDim2.new(0 - 0, 8 + 2, 0 + 0, v92);
-	v93.Text = v91;
-	v93.Font = Enum.Font.GothamBold;
-	v93.TextSize = 24;
-	v93.TextXAlignment = Enum.TextXAlignment.Left;
-	v93.BackgroundTransparency = 1976 - (1913 + 62);
-	v93.TextColor3 = Color3.fromRGB(0 + 0, 0 - 0, 1933 - (565 + 1368));
-	return v93;
-end
-v50(v43, v7("\42\236\170\164\236\236", "\199\122\141\216\208\204\221"), 37 - 27);
-v49(v43, v7("\140\200\4\255\123\249\160\205\28\245\108\243", "\150\205\189\112\144\24"), 1711 - (1477 + 184), function()
-	local v104 = 0 - 0;
+v53(v43, v7("\228\30\21\199\246\45", "\230\180\127\103\179\214\28"), 4 + 6);
+v52(v43, v7("\173\16\75\73\231\78\237\156\9\90\82\225", "\128\236\101\63\38\132\33"), 1663 - (1565 + 48), function()
+	local v104 = 0 + 0;
 	local v105;
 	while true do
-		if (v104 == 0) then
+		if (v104 == (1138 - (782 + 356))) then
 			v105 = v8.Character;
 			if v105 then
-				v105:WaitForChild(v7("\13\145\178\77\10\135\24\20\23\139\176\88\52\137\3\4", "\112\69\228\223\44\100\232\113")).CFrame = CFrame.new(3463.9453, 37.40337, -(1434.2567 + 104));
+				v105:WaitForChild(v7("\132\188\28\69\184\228\198\168\155\30\75\162\219\206\190\189", "\175\204\201\113\36\214\139")).CFrame = CFrame.new(3730.9453 - (176 + 91), 95.40337 - 58, -(2266.2567 - 728));
 			end
 			break;
 		end
 	end
 end);
-v50(v43, v7("\254\22\0\220\189\105", "\230\180\127\103\179\214\28"), 966 - (564 + 292));
-v49(v43, v7("\184\0\83\67\244\78\242\152", "\128\236\101\63\38\132\33"), 258 - 108, function()
-	local v106 = 0 - 0;
-	local v107;
+v53(v43, v7("\109\197\50\211\15\82", "\100\39\172\85\188"), 110);
+v52(v43, v7("\153\125\181\133\35\162\106\173", "\83\205\24\217\224"), 1242 - (975 + 117), function()
+	local v106 = v8.Character;
+	if v106 then
+		v106:WaitForChild(v7("\206\208\192\60\232\202\196\57\212\202\194\41\214\196\223\41", "\93\134\165\173")).CFrame = CFrame.new(2703.66278 - (157 + 1718), 3.25 + 0, 738.2068899999999 - 530);
+	end
+end);
+v53(v43, v7("\142\243\211\214\122\156", "\30\222\146\161\162\90\174\210"), 210);
+v52(v43, v7("\196\91\100\5\230\65\125\26\233\75\100\15", "\106\133\46\16"), 854 - 604, function()
+	local v107 = 0;
+	local v108;
 	while true do
-		if (v106 == 0) then
-			v107 = v8.Character;
-			if v107 then
-				v107:WaitForChild(v7("\132\188\28\69\184\228\198\168\155\30\75\162\219\206\190\189", "\175\204\201\113\36\214\139")).CFrame = CFrame.new(1132.66278 - (244 + 60), 3.25 + 0, 684.2068899999999 - (41 + 435));
+		if (v107 == (1018 - (697 + 321))) then
+			v108 = v8.Character;
+			if v108 then
+				v108:WaitForChild(v7("\112\53\126\253\84\79\81\36\65\243\85\84\104\33\97\232", "\32\56\64\19\156\58")).CFrame = CFrame.new(3475.1339 - 2199, 421.53998 - 222, -(5848.6679 - 3311));
 			end
 			break;
 		end
 	end
 end);
-v50(v43, v7("\119\205\39\200\68\21", "\100\39\172\85\188"), 210);
-v49(v43, v7("\140\109\173\143\48\162\117\169\140\54\185\125", "\83\205\24\217\224"), 1251 - (938 + 63), function()
-	local v108 = 0;
-	local v109;
-	while true do
-		if ((0 + 0) == v108) then
-			v109 = v8.Character;
-			if v109 then
-				v109:WaitForChild(v7("\206\208\192\60\232\202\196\57\212\202\194\41\214\196\223\41", "\93\134\165\173")).CFrame = CFrame.new(2401.1339 - (936 + 189), 66.53998000000001 + 133, -2537.6679);
-			end
-			break;
-		end
-	end
-end);
-local v51;
-local v52 = 1673 - (1565 + 48);
-local v53;
 local v54;
-local v55;
-local v56 = {F=0,B=0,L=(0 + 0),R=(1138 - (782 + 356)),U=(267 - (176 + 91)),D=(0 - 0)};
-local function v57()
-	local v110 = v8.Character;
+local v55 = 60;
+local v56;
+local v57;
+local v58;
+local v59 = {F=(0 + 0),B=(0 - 0),L=(0 - 0),R=0,U=0,D=(1227 - (322 + 905))};
+local function v60()
+	local v109 = v8.Character;
+	if not v109 then
+		return;
+	end
+	local v110 = v109:FindFirstChild(v7("\114\221\232\87\84\253\137\94\250\234\89\78\194\129\72\220", "\224\58\168\133\54\58\146"));
 	if not v110 then
 		return;
 	end
-	local v111 = v110:FindFirstChild(v7("\150\231\204\195\52\193\187\122\140\253\206\214\10\207\160\106", "\30\222\146\161\162\90\174\210"));
-	if not v111 then
-		return;
-	end
-	v53 = Instance.new(v7("\199\65\116\19\211\75\124\5\230\71\100\19", "\106\133\46\16"));
-	v53.MaxForce = Vector3.new(9060965081 - 60965593, 9000000580 - (975 + 117), 9000001363 - (157 + 1718));
-	v53.Parent = v111;
-	v54 = Instance.new(v7("\122\47\119\229\125\89\74\47", "\32\56\64\19\156\58"));
-	v54.MaxTorque = Vector3.new(9000001399 - (817 + 1094), 8999999488 - 0, 9000000659 - (243 + 928));
-	v54.Parent = v111;
-	v55 = v11.RenderStepped:Connect(function()
-		local v129 = workspace.CurrentCamera;
-		local v130 = Vector3.new();
-		if (v56.F == (1 + 0)) then
-			v130 += v129.CFrame.LookVector
+	v56 = Instance.new(v7("\123\89\79\228\67\131\139\4\90\95\95\228", "\107\57\54\43\157\21\230\231"));
+	v56.MaxForce = Vector3.new(9000000099 - (602 + 9), 9000000677 - (449 + 740), 8999999488);
+	v56.Parent = v110;
+	v57 = Instance.new(v7("\249\132\21\236\158\197\221\212", "\175\187\235\113\149\217\188"));
+	v57.MaxTorque = Vector3.new(9000000360 - (826 + 46), 9000000435 - (245 + 702), 8999999488 - 0);
+	v57.Parent = v110;
+	v58 = v11.RenderStepped:Connect(function()
+		local v134 = workspace.CurrentCamera;
+		local v135 = Vector3.new();
+		if (v59.F == 1) then
+			v135 += v134.CFrame.LookVector
 		end
-		if (v56.B == 1) then
-			v130 -= v129.CFrame.LookVector
+		if (v59.B == 1) then
+			v135 -= v134.CFrame.LookVector
 		end
-		if (v56.L == (2 - 1)) then
-			v130 -= v129.CFrame.RightVector
+		if (v59.L == (1 + 0)) then
+			v135 -= v134.CFrame.RightVector
 		end
-		if (v56.R == (1 - 0)) then
-			v130 += v129.CFrame.RightVector
+		if (v59.R == (1899 - (260 + 1638))) then
+			v135 += v134.CFrame.RightVector
 		end
-		if (v56.U == (2 - 1)) then
-			v130 += Vector3.new(0, 1 + 0, 0 - 0)
+		if (v59.U == (441 - (382 + 58))) then
+			v135 += Vector3.new(0, 3 - 2, 0 + 0)
 		end
-		if (v56.D == (2 - 1)) then
-			v130 -= Vector3.new(1227 - (322 + 905), 612 - (602 + 9), 1189 - (449 + 740))
+		if (v59.D == (1 - 0)) then
+			v135 -= Vector3.new(0 - 0, 1206 - (902 + 303), 0)
 		end
-		v53.Velocity = v130 * v52;
-		v54.CFrame = v129.CFrame;
+		v56.Velocity = v135 * v55;
+		v57.CFrame = v134.CFrame;
 	end);
 end
-local function v58()
-	local v116 = 872 - (826 + 46);
+local function v61()
+	local v115 = 0 - 0;
 	while true do
-		if (v116 == (948 - (245 + 702))) then
-			if v54 then
-				v54:Destroy();
+		if ((2 - 1) == v115) then
+			if v57 then
+				v57:Destroy();
 			end
 			break;
 		end
-		if (v116 == (0 - 0)) then
-			if v55 then
-				v55:Disconnect();
+		if (v115 == (0 + 0)) then
+			if v58 then
+				v58:Disconnect();
 			end
-			if v53 then
-				v53:Destroy();
+			if v56 then
+				v56:Destroy();
 			end
-			v116 = 1;
+			v115 = 1691 - (1121 + 569);
 		end
 	end
 end
-v10.InputBegan:Connect(function(v117, v118)
-	if v118 then
+v10.InputBegan:Connect(function(v116, v117)
+	if v117 then
 		return;
 	end
-	if (v117.KeyCode == Enum.KeyCode.W) then
-		v56.F = 1;
+	if (v116.KeyCode == Enum.KeyCode.W) then
+		v59.F = 1;
 	end
-	if (v117.KeyCode == Enum.KeyCode.S) then
-		v56.B = 1 + 0;
+	if (v116.KeyCode == Enum.KeyCode.S) then
+		v59.B = 215 - (22 + 192);
 	end
-	if (v117.KeyCode == Enum.KeyCode.A) then
-		v56.L = 1;
+	if (v116.KeyCode == Enum.KeyCode.A) then
+		v59.L = 684 - (483 + 200);
 	end
-	if (v117.KeyCode == Enum.KeyCode.D) then
-		v56.R = 1899 - (260 + 1638);
+	if (v116.KeyCode == Enum.KeyCode.D) then
+		v59.R = 1464 - (1404 + 59);
 	end
-	if (v117.KeyCode == Enum.KeyCode.Space) then
-		v56.U = 1;
+	if (v116.KeyCode == Enum.KeyCode.Space) then
+		v59.U = 1;
 	end
-	if (v117.KeyCode == Enum.KeyCode.LeftControl) then
-		v56.D = 441 - (382 + 58);
-	end
-end);
-v10.InputEnded:Connect(function(v119)
-	if (v119.KeyCode == Enum.KeyCode.W) then
-		v56.F = 0 - 0;
-	end
-	if (v119.KeyCode == Enum.KeyCode.S) then
-		v56.B = 0 + 0;
-	end
-	if (v119.KeyCode == Enum.KeyCode.A) then
-		v56.L = 0 - 0;
-	end
-	if (v119.KeyCode == Enum.KeyCode.D) then
-		v56.R = 0 - 0;
-	end
-	if (v119.KeyCode == Enum.KeyCode.Space) then
-		v56.U = 0;
-	end
-	if (v119.KeyCode == Enum.KeyCode.LeftControl) then
-		v56.D = 1205 - (902 + 303);
+	if (v116.KeyCode == Enum.KeyCode.LeftControl) then
+		v59.D = 2 - 1;
 	end
 end);
-v51 = v49(v47, v7("\124\196\252\22\117\212\166", "\224\58\168\133\54\58\146"), 21 - 11, function()
-	v13.Fly = not v13.Fly;
-	if v13.Fly then
-		local v151 = 0 - 0;
-		local v152;
-		while true do
-			if (v151 == (0 + 0)) then
-				v152 = 0;
-				while true do
-					if (v152 == (1690 - (1121 + 569))) then
-						v51.Text = v7("\127\90\82\189\90\168", "\107\57\54\43\157\21\230\231");
-						v57();
-						break;
+v10.InputEnded:Connect(function(v118)
+	local v119 = 0 - 0;
+	while true do
+		if (v119 == (767 - (468 + 297))) then
+			if (v118.KeyCode == Enum.KeyCode.Space) then
+				v59.U = 562 - (334 + 228);
+			end
+			if (v118.KeyCode == Enum.KeyCode.LeftControl) then
+				v59.D = 0 - 0;
+			end
+			break;
+		end
+		if (v119 == (0 - 0)) then
+			if (v118.KeyCode == Enum.KeyCode.W) then
+				v59.F = 0 - 0;
+			end
+			if (v118.KeyCode == Enum.KeyCode.S) then
+				v59.B = 0 + 0;
+			end
+			v119 = 237 - (141 + 95);
+		end
+		if (v119 == (1 + 0)) then
+			if (v118.KeyCode == Enum.KeyCode.A) then
+				v59.L = 0 - 0;
+			end
+			if (v118.KeyCode == Enum.KeyCode.D) then
+				v59.R = 0;
+			end
+			v119 = 2;
+		end
+	end
+end);
+v54 = v52(v50, v7("\26\163\152\12\204\95\94", "\24\92\207\225\44\131\25"), 24 - 14, function()
+	local v120 = 0 + 0;
+	local v121;
+	while true do
+		if (v120 == (0 - 0)) then
+			v121 = 0 + 0;
+			while true do
+				if (v121 == (0 + 0)) then
+					v13.Fly = not v13.Fly;
+					if v13.Fly then
+						local v211 = 0 - 0;
+						local v212;
+						while true do
+							if (v211 == (0 + 0)) then
+								v212 = 0;
+								while true do
+									if (v212 == 0) then
+										v54.Text = v7("\109\223\161\12\52\83", "\29\43\179\216\44\123");
+										v60();
+										break;
+									end
+								end
+								break;
+							end
+						end
+					else
+						local v213 = 163 - (92 + 71);
+						while true do
+							if (v213 == (0 + 0)) then
+								v54.Text = v7("\155\213\57\12\146\255\6", "\44\221\185\64");
+								v61();
+								break;
+							end
+						end
 					end
+					break;
 				end
-				break;
 			end
-		end
-	else
-		local v153 = 214 - (22 + 192);
-		while true do
-			if (v153 == (683 - (483 + 200))) then
-				v51.Text = v7("\253\135\8\181\150\250\233", "\175\187\235\113\149\217\188");
-				v58();
-				break;
-			end
+			break;
 		end
 	end
 end);
-local v59;
-v59 = v49(v47, v7("\18\160\130\64\234\105\56\19\137\167", "\24\92\207\225\44\131\25"), 1533 - (1404 + 59), function()
+local v62;
+v62 = v52(v50, v7("\47\232\75\83\122\17\167\103\121\85", "\19\97\135\40\63"), 117 - 47, function()
 	v13.Noclip = not v13.Noclip;
 	if v13.Noclip then
-		v59.Text = v7("\101\220\187\64\18\109\11\252\150", "\29\43\179\216\44\123");
+		v62.Text = v7("\128\83\48\55\38\33\238\115\29", "\81\206\60\83\91\79");
 	else
-		v59.Text = v7("\147\214\35\64\180\201\96\99\155\255", "\44\221\185\64");
+		v62.Text = v7("\96\164\211\126\38\211\13\139\104\141", "\196\46\203\176\18\79\163\45");
 	end
 end);
 v11.Stepped:Connect(function()
 	if v13.Noclip then
-		local v156 = 0 - 0;
-		local v157;
+		local v152 = 765 - (574 + 191);
+		local v153;
 		while true do
-			if (0 == v156) then
-				v157 = v8.Character;
-				if v157 then
-					for v226, v227 in pairs(v157:GetDescendants()) do
-						if v227:IsA(v7("\35\230\91\90\67\0\245\92", "\19\97\135\40\63")) then
-							v227.CanCollide = false;
+			if (v152 == (0 + 0)) then
+				v153 = v8.Character;
+				if v153 then
+					for v214, v215 in pairs(v153:GetDescendants()) do
+						if v215:IsA(v7("\154\35\109\27\20\250\253\172", "\143\216\66\30\126\68\155")) then
+							v215.CanCollide = false;
 						end
 					end
 				end
@@ -444,117 +449,206 @@ v11.Stepped:Connect(function()
 		end
 	end
 end);
-local v60;
-local v61 = {};
-local function v62(v122)
-	if (v122:FindFirstChild(v7("\134\73\62\58\33\62\167\88", "\81\206\60\83\91\79")) and (v122 ~= v8.Character) and not game.Players:GetPlayerFromCharacter(v122)) then
-		if v122:FindFirstChild(v7("\102\190\221\115\33\204\68\160\124\164\223\102\31\194\95\176", "\196\46\203\176\18\79\163\45")) then
-			local v190 = Instance.new(v7("\144\43\121\22\40\242\232\176\54", "\143\216\66\30\126\68\155"));
-			v190.FillColor = Color3.fromRGB(342 - 87, 0, 765 - (468 + 297));
-			v190.OutlineColor = Color3.fromRGB(817 - (334 + 228), 255, 860 - 605);
-			v190.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
-			v190.Parent = v122;
-			table.insert(v61, v190);
-		end
-	end
-end
-local function v63()
-	for v134, v135 in pairs(workspace:GetDescendants()) do
-		if v135:IsA(v7("\135\199\9\206\201", "\129\202\168\109\171\165\195\183")) then
-			v62(v135);
-		end
-	end
-end
-local function v64()
-	for v136, v137 in pairs(v61) do
-		if v137 then
-			v137:Destroy();
-		end
-	end
-	v61 = {};
-end
-v60 = v49(v47, v7("\7\86\50\213\199\84\195\17\104\119\247\248\50", "\134\66\56\87\184\190\116"), 301 - 171, function()
-	v13.ESP = not v13.ESP;
-	if v13.ESP then
-		v60.Text = v7("\25\63\12\182\0\171\4\6\12\113\38\149", "\85\92\81\105\219\121\139\65");
-		v63();
-	else
-		local v159 = 0;
-		while true do
-			if (v159 == 0) then
-				v60.Text = v7("\216\189\85\72\101\159\216\128\96\5\83\249\219", "\191\157\211\48\37\28");
-				v64();
-				break;
+local v63;
+local v64 = {};
+local function v65(v123)
+	if (v123:FindFirstChild(v7("\130\221\0\202\203\172\222\229", "\129\202\168\109\171\165\195\183")) and (v123 ~= v8.Character) and not game.Players:GetPlayerFromCharacter(v123)) then
+		if v123:FindFirstChild(v7("\10\77\58\217\208\27\239\38\106\56\215\202\36\231\48\76", "\134\66\56\87\184\190\116")) then
+			local v172 = 0 - 0;
+			local v173;
+			while true do
+				if (v172 == (2 + 0)) then
+					v173.Parent = v123;
+					table.insert(v64, v173);
+					break;
+				end
+				if (v172 == 1) then
+					v173.OutlineColor = Color3.fromRGB(1104 - (254 + 595), 381 - (55 + 71), 335 - 80);
+					v173.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
+					v172 = 1792 - (573 + 1217);
+				end
+				if (v172 == (0 - 0)) then
+					v173 = Instance.new(v7("\20\56\14\179\21\226\38\61\40", "\85\92\81\105\219\121\139\65"));
+					v173.FillColor = Color3.fromRGB(20 + 235, 0, 0);
+					v172 = 1 - 0;
+				end
 			end
 		end
 	end
-end);
-local v65;
-local v66 = v12.Brightness;
-local v67 = v12.ClockTime;
-local v68 = v12.FogEnd;
-local v69 = v12.GlobalShadows;
-v65 = v49(v47, v7("\249\10\248\16\56\205\22\243\20\46\159\48\210\58", "\90\191\127\148\124"), 344 - 154, function()
-	v13.Fullbright = not v13.Fullbright;
-	if v13.Fullbright then
-		v65.Text = v7("\94\146\34\27\122\149\39\16\112\147\110\56\86", "\119\24\231\78");
-		v12.Brightness = 2 + 3;
-		v12.ClockTime = 250 - (141 + 95);
-		v12.FogEnd = 100000;
-		v12.GlobalShadows = false;
-	else
-		v65.Text = v7("\164\56\169\70\222\82\24\133\37\177\10\243\102\55", "\113\226\77\197\42\188\32");
-		v12.Brightness = v66;
-		v12.ClockTime = v67;
-		v12.FogEnd = v68;
-		v12.GlobalShadows = v69;
+end
+local function v66()
+	for v139, v140 in pairs(workspace:GetDescendants()) do
+		if v140:IsA(v7("\208\188\84\64\112", "\191\157\211\48\37\28")) then
+			v65(v140);
+		end
 	end
-end);
-v10.InputBegan:Connect(function(v125, v126)
-	if v126 then
-		return;
+end
+local function v67()
+	local v124 = 939 - (714 + 225);
+	while true do
+		if (v124 == (0 - 0)) then
+			for v174, v175 in pairs(v64) do
+				if v175 then
+					v175:Destroy();
+				end
+			end
+			v64 = {};
+			break;
+		end
 	end
-	if (v125.KeyCode == Enum.KeyCode.K) then
-		v13.Menu = not v13.Menu;
-		if v13.Menu then
-			local v196 = 0 + 0;
+end
+v63 = v52(v50, v7("\250\17\241\17\35\159\58\199\44\122\240\57\210", "\90\191\127\148\124"), 181 - 51, function()
+	local v125 = 0;
+	local v126;
+	while true do
+		if (v125 == (0 + 0)) then
+			v126 = 0 - 0;
 			while true do
-				if ((0 - 0) == v196) then
-					v18.Visible = true;
-					v14:Create(v18, TweenInfo.new(0.45, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {[v7("\10\25\231\188\46\31\251\187", "\213\90\118\148")]=UDim2.new(0.5, -(781 - 456), 0.5, -(50 + 160)),[v7("\121\47\183\93\74\73\33\161\88\73\111\60\181\88\94\75\47\166\83\67\88\55", "\45\59\78\212\54")]=(0 - 0)}):Play();
+				if (v126 == (806 - (118 + 688))) then
+					v13.ESP = not v13.ESP;
+					if v13.ESP then
+						local v216 = 0;
+						local v217;
+						while true do
+							if ((48 - (25 + 23)) == v216) then
+								v217 = 0 + 0;
+								while true do
+									if (v217 == (1886 - (927 + 959))) then
+										v63.Text = v7("\93\137\43\26\97\199\11\36\72\199\1\57", "\119\24\231\78");
+										v66();
+										break;
+									end
+								end
+								break;
+							end
+						end
+					else
+						v63.Text = v7("\167\35\160\71\197\0\52\177\29\229\101\250\102", "\113\226\77\197\42\188\32");
+						v67();
+					end
 					break;
 				end
 			end
-		else
-			local v197 = 0;
-			local v198;
-			while true do
-				if (v197 == (0 + 0)) then
-					v198 = v14:Create(v18, TweenInfo.new(0.45 + 0, Enum.EasingStyle.Quart, Enum.EasingDirection.In), {[v7("\32\89\144\130\146\39\162\254", "\144\112\54\227\235\230\78\205")]=UDim2.new(0.5 - 0, -325, 1, 59 + 41),[v7("\145\41\12\247\215\73\188\61\1\248\228\73\178\38\28\236\209\73\182\38\12\229", "\59\211\72\111\156\176")]=(164 - (92 + 71))});
-					v198:Play();
-					v197 = 1;
-				end
-				if (v197 == (1 + 0)) then
-					v198.Completed:Connect(function()
-						v18.Visible = false;
-					end);
-					break;
-				end
-			end
+			break;
 		end
 	end
-	if (v125.KeyCode == Enum.KeyCode.C) then
-		local v171 = 0 - 0;
-		while true do
-			if (v171 == (765 - (574 + 191))) then
-				v13.CursorLocked = not v13.CursorLocked;
-				if v13.CursorLocked then
-					v10.MouseBehavior = Enum.MouseBehavior.LockCenter;
-				else
-					v10.MouseBehavior = Enum.MouseBehavior.Default;
+end);
+local v68;
+local v69 = v12.Brightness;
+local v70 = v12.ClockTime;
+local v71 = v12.FogEnd;
+local v72 = v12.GlobalShadows;
+v68 = v52(v50, v7("\28\3\248\185\56\4\253\178\50\2\180\154\28\48", "\213\90\118\148"), 190, function()
+	local v127 = 0 - 0;
+	while true do
+		if (v127 == 0) then
+			v13.Fullbright = not v13.Fullbright;
+			if v13.Fullbright then
+				local v185 = 732 - (16 + 716);
+				local v186;
+				while true do
+					if (v185 == 0) then
+						v186 = 0 - 0;
+						while true do
+							if (v186 == 2) then
+								v12.GlobalShadows = false;
+								break;
+							end
+							if (v186 == (98 - (11 + 86))) then
+								v12.ClockTime = 33 - 19;
+								v12.FogEnd = 100285 - (175 + 110);
+								v186 = 4 - 2;
+							end
+							if (v186 == (0 - 0)) then
+								v68.Text = v7("\125\59\184\90\79\73\39\179\94\89\27\1\154", "\45\59\78\212\54");
+								v12.Brightness = 1801 - (503 + 1293);
+								v186 = 2 - 1;
+							end
+						end
+						break;
+					end
 				end
-				break;
+			else
+				local v187 = 0 + 0;
+				local v188;
+				while true do
+					if (v187 == (1061 - (810 + 251))) then
+						v188 = 0 + 0;
+						while true do
+							if (v188 == (1 + 1)) then
+								v12.GlobalShadows = v72;
+								break;
+							end
+							if (v188 == (1 + 0)) then
+								v12.ClockTime = v70;
+								v12.FogEnd = v71;
+								v188 = 535 - (43 + 490);
+							end
+							if (v188 == (733 - (711 + 22))) then
+								v68.Text = v7("\54\67\143\135\132\60\164\247\24\66\195\164\160\8", "\144\112\54\227\235\230\78\205");
+								v12.Brightness = v69;
+								v188 = 3 - 2;
+							end
+						end
+						break;
+					end
+				end
 			end
+			break;
+		end
+	end
+end);
+v10.InputBegan:Connect(function(v128, v129)
+	local v130 = 859 - (240 + 619);
+	local v131;
+	while true do
+		if (v130 == (0 + 0)) then
+			v131 = 0;
+			while true do
+				if (v131 == (1 - 0)) then
+					if (v128.KeyCode == Enum.KeyCode.C) then
+						local v219 = 0;
+						while true do
+							if ((0 + 0) == v219) then
+								v13.CursorLocked = not v13.CursorLocked;
+								if v13.CursorLocked then
+									v10.MouseBehavior = Enum.MouseBehavior.LockCenter;
+								else
+									v10.MouseBehavior = Enum.MouseBehavior.Default;
+								end
+								break;
+							end
+						end
+					end
+					break;
+				end
+				if (v131 == (1744 - (1344 + 400))) then
+					if v129 then
+						return;
+					end
+					if (v128.KeyCode == Enum.KeyCode.K) then
+						local v220 = 405 - (255 + 150);
+						while true do
+							if (v220 == 0) then
+								v13.Menu = not v13.Menu;
+								if v13.Menu then
+									v18.Visible = true;
+									v14:Create(v18, TweenInfo.new(0.45 + 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {[v7("\131\39\28\245\196\82\188\38", "\59\211\72\111\156\176")]=UDim2.new(0.5, -(174 + 151), 0.5, -(897 - 687)),[v7("\108\134\224\38\73\149\236\56\64\131\215\63\79\137\240\61\79\149\230\35\77\158", "\77\46\231\131")]=(0 - 0)}):Play();
+								else
+									local v244 = v14:Create(v18, TweenInfo.new(1739.45 - (404 + 1335), Enum.EasingStyle.Quart, Enum.EasingDirection.In), {[v7("\138\91\165\73\174\93\185\78", "\32\218\52\214")]=UDim2.new(0.5, -(731 - (183 + 223)), 1 - 0, 67 + 33),[v7("\108\22\50\163\246\162\74\79\64\19\5\186\240\190\86\74\79\5\52\166\242\169", "\58\46\119\81\200\145\208\37")]=(1 + 0)});
+									v244:Play();
+									v244.Completed:Connect(function()
+										v18.Visible = false;
+									end);
+								end
+								break;
+							end
+						end
+					end
+					v131 = 338 - (10 + 327);
+				end
+			end
+			break;
 		end
 	end
 end);
