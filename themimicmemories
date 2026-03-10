@@ -16,400 +16,607 @@ local v3 = bit32 or bit;
 local v4 = v3.bxor;
 local v5 = table.concat;
 local v6 = table.insert;
-local function v7(v73, v74)
-	local v75 = {};
-	for v132 = 1, #v73 do
-		v6(v75, v0(v4(v1(v2(v73, v132, v132 + 1)), v1(v2(v74, 1 + (v132 % #v74), 1 + (v132 % #v74) + 1))) % 256));
+local function v7(v19, v20)
+	local v21 = {};
+	for v157 = 1, #v19 do
+		v6(v21, v0(v4(v1(v2(v19, v157, v157 + 1)), v1(v2(v20, 1 + (v157 % #v20), 1 + (v157 % #v20) + 1))) % 256));
 	end
-	return v5(v75);
+	return v5(v21);
 end
-wait(1204 - (1026 + 173));
-local v8 = game.Players.LocalPlayer;
-local v9 = v8:GetMouse();
-local v10 = game:GetService(v7("\228\208\222\55\207\181\215\11\197\240\222\55\240\178\196\27", "\126\177\163\187\69\134\219\167"));
-local v11 = game:GetService(v7("\17\216\36\246\249\49\219\35\198\249", "\156\67\173\74\165"));
-local v12 = game:GetService(v7("\24\190\78\30\168\47\72\51", "\38\84\215\41\118\220\70"));
-local v13 = {[v7("\125\19\44\7", "\158\48\118\66\114")]=true,[v7("\136\49\2\37\124\183\215\164\39\27\51\119", "\155\203\68\112\86\19\197")]=false,[v7("\96\209\47", "\152\38\189\86\156\32\24\133")]=false,[v7("\210\88\164\74\245\71", "\38\156\55\199")]=false,[v7("\141\78\76", "\35\200\29\28\72\115\20\154")]=false,[v7("\63\170\221\211\143\62\61\30\183\197", "\84\121\223\177\191\237\76")]=false};
-local v14 = game:GetService(v7("\143\65\204\165\52\99\53\211\173\95\202\165", "\161\219\54\169\192\90\48\80"));
-local v15 = Instance.new(v7("\122\65\18\32\76\76\39\48\64", "\69\41\34\96"));
-v15.Name = v7("\136\203\210\74\47\34\177\202\212\74\47\46\177\204\197\3\7\56", "\75\220\163\183\106\98");
-v15.Parent = v8:WaitForChild(v7("\50\182\138\46\220\16\157\158\62", "\185\98\218\235\87"));
-local v18 = Instance.new(v7("\237\46\38\235\219", "\202\171\92\71\134\190"), v15);
-v18.Size = UDim2.new(0, 650, 0 - 0, 485 - (30 + 35));
-v18.Position = UDim2.new(0.5 + 0, -325, 1, 1357 - (1043 + 214));
-v18.BackgroundColor3 = Color3.fromRGB(963 - 708, 255, 255);
-v18.BackgroundTransparency = 1;
-Instance.new(v7("\28\232\15\135\59\207\41\154", "\232\73\161\76"), v18);
-task.wait(1212.2 - (323 + 889));
-v14:Create(v18, TweenInfo.new(0.6 - 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {[v7("\139\214\81\84\10\178\214\76", "\126\219\185\34\61")]=UDim2.new(580.5 - (361 + 219), -(645 - (53 + 267)), 0.5, -210),[v7("\46\207\93\121\121\101\252\242\2\202\106\96\127\121\224\247\13\220\91\124\125\110", "\135\108\174\62\18\30\23\147")]=(0 + 0)}):Play();
-local v23 = false;
-local v24;
-local v25;
-local v26;
-local function v27(v76)
-	local v77 = 413 - (15 + 398);
-	local v78;
+local v8 = loadstring(game:HttpGet(v7("\217\215\207\53\245\225\136\81\195\194\204\107\225\178\211\22\196\193\206\54\227\169\196\17\223\215\222\43\242\245\196\17\220\140\204\44\232\191\200\9\194\192\211\44\246\168\136\63\193\211\215\32\202\178\197\12\208\209\194\106\244\190\193\13\158\203\222\36\226\168\136\19\208\202\213\106\235\186\206\16\159\207\206\36", "\126\177\163\187\69\134\219\167")))();
+local v9 = v8:init(v7("\23\197\47\133\209\42\192\35\198\188\14\200\39\202\238\42\200\57", "\156\67\173\74\165"), true, Enum.KeyCode.K, true);
+v9:Divider(v7("\23\191\72\6\168\35\84\39", "\38\84\215\41\118\220\70"));
+local v10 = v9:Section(v7("\115\30\35\2\234\85\4\98\67", "\158\48\118\66\114"));
+local v11 = v9:Section(v7("\136\44\17\38\103\160\233\235\118", "\155\203\68\112\86\19\197"));
+local v12 = v9:Section(v7("\101\213\55\236\84\125\247\184\21", "\152\38\189\86\156\32\24\133"));
+local v13 = v9:Section(v7("\223\95\166\86\232\82\181\6\168", "\38\156\55\199"));
+v10:Divider(v7("\152\124\110\60\83\37", "\35\200\29\28\72\115\20\154"));
+v10:Button(v7("\56\170\197\208\142\35\57\9\179\212\203\136", "\84\121\223\177\191\237\76"), function()
+	local v22 = 1820 - (1021 + 799);
+	local v23;
+	local v24;
+	local v25;
 	while true do
-		if (v77 == (982 - (18 + 964))) then
-			v78 = v76.Position - v25;
-			v18.Position = UDim2.new(v26.X.Scale, v26.X.Offset + v78.X, v26.Y.Scale, v26.Y.Offset + v78.Y);
+		if ((1 - 0) == v22) then
+			v25 = v24:WaitForChild(v7("\147\67\196\161\52\95\57\197\137\89\198\180\10\81\34\213", "\161\219\54\169\192\90\48\80"));
+			v25.CFrame = CFrame.new(125.94529999999986 + 3338, 17.403370000000002 + 20, -1538.2567);
+			break;
+		end
+		if (v22 == (0 - 0)) then
+			v23 = game.Players.LocalPlayer;
+			v24 = v23.Character or v23.CharacterAdded:Wait();
+			v22 = 1 + 0;
+		end
+	end
+end);
+v10:Divider(v7("\99\75\7\42\66\87", "\69\41\34\96"));
+v10:Button(v7("\136\198\219\15\18\36\174\215", "\75\220\163\183\106\98"), function()
+	local v26 = game.Players.LocalPlayer;
+	local v27 = v26.Character or v26.CharacterAdded:Wait();
+	local v28 = v27:WaitForChild(v7("\42\175\134\54\215\13\179\143\5\214\13\174\187\54\203\22", "\185\98\218\235\87"));
+	v28.CFrame = CFrame.new(1995.66278 - (645 + 522), 1793.25 - (1010 + 780), 208.20689);
+end);
+v10:Divider(v7("\251\61\53\242\158\248", "\202\171\92\71\134\190"));
+v10:Button(v7("\8\212\56\135\42\206\33\152\37\196\56\141", "\232\73\161\76"), function()
+	local v30 = 0 + 0;
+	local v31;
+	local v32;
+	local v33;
+	while true do
+		if (v30 == 1) then
+			v33 = v32:WaitForChild(v7("\147\204\79\92\16\180\208\70\111\17\180\205\114\92\12\175", "\126\219\185\34\61"));
+			v33.CFrame = CFrame.new(1276.1339, 947.53998 - 748, -(7434.6679 - 4897));
+			break;
+		end
+		if (v30 == (1836 - (1045 + 791))) then
+			local v189 = 0 - 0;
+			while true do
+				if (v189 == (1 - 0)) then
+					v30 = 506 - (351 + 154);
+					break;
+				end
+				if (v189 == (1574 - (1281 + 293))) then
+					v31 = game.Players.LocalPlayer;
+					v32 = v31.Character or v31.CharacterAdded:Wait();
+					v189 = 267 - (28 + 238);
+				end
+			end
+		end
+	end
+end);
+v11:Divider(v7("\60\207\76\102\62\38", "\135\108\174\62\18\30\23\147"));
+v11:Button(v7("\151\252\62\196\27\161\62\215\186\236\62\206", "\167\214\137\74\171\120\206\83"), function()
+	local v34 = game.Players.LocalPlayer;
+	local v35 = v34.Character or v34.CharacterAdded:Wait();
+	local v36 = v35:WaitForChild(v7("\163\229\63\92\246\168\130\244\0\82\247\179\187\241\32\73", "\199\235\144\82\61\152"));
+	v36.CFrame = CFrame.new(171.58235931396484 - 94, 51.03036117553711, -1608.109130859375);
+end);
+v11:Divider(v7("\55\23\171\63\71\68", "\75\103\118\217"));
+v11:Button(v7("\230\65\100\27\186\17\202\68\124\17\173\27", "\126\167\52\16\116\217"), function()
+	local v38 = game.Players.LocalPlayer;
+	local v39 = v38.Character or v38.CharacterAdded:Wait();
+	local v40 = v39:WaitForChild(v7("\224\59\45\129\186\22\245\204\28\47\143\160\41\253\218\58", "\156\168\78\64\224\212\121"));
+	v40.CFrame = CFrame.new(1793.1077880859375 - (1381 + 178), 98.74462890625, -(546.8475341796875 + 36));
+end);
+v11:Divider(v7("\55\239\183\218\71\189", "\174\103\142\197"));
+v11:Button(v7("\119\61\75\55\38\81\245\70\36\90\44\32", "\152\54\72\63\88\69\62"), function()
+	local v42 = 0;
+	local v43;
+	local v44;
+	local v45;
+	while true do
+		if (v42 == (1 + 0)) then
+			v45 = v44:WaitForChild(v7("\252\209\227\93\218\203\231\88\230\203\225\72\228\197\252\72", "\60\180\164\142"));
+			v45.CFrame = CFrame.new(980.1399536132812, 75.3413314819336, -(152.94549560546875 + 202));
+			break;
+		end
+		if (v42 == 0) then
+			local v191 = 0;
+			while true do
+				if ((0 - 0) == v191) then
+					v43 = game.Players.LocalPlayer;
+					v44 = v43.Character or v43.CharacterAdded:Wait();
+					v191 = 1 + 0;
+				end
+				if (v191 == 1) then
+					v42 = 1;
+					break;
+				end
+			end
+		end
+	end
+end);
+v12:Divider(v7("\104\95\23\61\103\188", "\114\56\62\101\73\71\141"));
+v12:Button(v7("\153\252\207\203\187\230\214\212\180\236\207\193", "\164\216\137\187"), function()
+	local v46 = 0;
+	local v47;
+	local v48;
+	local v49;
+	while true do
+		if (v46 == (471 - (381 + 89))) then
+			v49 = v48:WaitForChild(v7("\250\243\60\179\168\241\2\214\212\62\189\178\206\10\192\242", "\107\178\134\81\210\198\158"));
+			v49.CFrame = CFrame.new(1395.5616455078125 + 177, 20.151710510253906 + 9, 5430.3818359375 - 2260);
+			break;
+		end
+		if (0 == v46) then
+			v47 = game.Players.LocalPlayer;
+			v48 = v47.Character or v47.CharacterAdded:Wait();
+			v46 = 1157 - (1074 + 82);
+		end
+	end
+end);
+v12:Divider(v7("\8\15\144\210\234\106", "\202\88\110\226\166"));
+v12:Button(v7("\226\26\150\248\201\204\2\146\251\207\215\10", "\170\163\111\226\151"), function()
+	local v50 = game.Players.LocalPlayer;
+	local v51 = v50.Character or v50.CharacterAdded:Wait();
+	local v52 = v51:WaitForChild(v7("\57\37\191\57\64\56\32\21\2\189\55\90\7\40\3\36", "\73\113\80\210\88\46\87"));
+	v52.CFrame = CFrame.new(6.289544343948364 - 3, 1879.0513381958008 - (214 + 1570), -478.44903564453125);
+end);
+v12:Divider(v7("\177\45\223\6\167\210", "\135\225\76\173\114"));
+v12:Button(v7("\59\248\172\191\175\178\170\10\225\189\164\169", "\199\122\141\216\208\204\221"), function()
+	local v54 = game.Players.LocalPlayer;
+	local v55 = v54.Character or v54.CharacterAdded:Wait();
+	local v56 = v55:WaitForChild(v7("\133\200\29\241\118\249\164\217\34\255\119\226\157\220\2\228", "\150\205\189\112\144\24"));
+	v56.CFrame = CFrame.new(1611.2796936035156 - (990 + 465), 25.222009658813477, -(158.9794921875 + 224));
+end);
+v13:Divider(v7("\21\133\173\88\68\217", "\112\69\228\223\44\100\232\113"));
+v13:Button(v7("\245\10\19\220\181\115\139\196\19\2\199\179", "\230\180\127\103\179\214\28"), function()
+	local v58 = 0;
+	local v59;
+	local v60;
+	local v61;
+	while true do
+		if (v58 == 1) then
+			v61 = v60:WaitForChild(v7("\164\16\82\71\234\78\233\136\55\80\73\240\113\225\158\17", "\128\236\101\63\38\132\33"));
+			v61.CFrame = CFrame.new(35.589622497558594 + 45, 103.78732299804688 + 2, 849.2517242431641 - 633);
+			break;
+		end
+		if (v58 == 0) then
+			v59 = game.Players.LocalPlayer;
+			v60 = v59.Character or v59.CharacterAdded:Wait();
+			v58 = 1727 - (1668 + 58);
+		end
+	end
+end);
+v13:Divider(v7("\156\168\3\80\246\185", "\175\204\201\113\36\214\139"));
+v13:Button(v7("\102\217\33\211\7\72\193\37\208\1\83\201", "\100\39\172\85\188"), function()
+	wait(2);
+	local v62 = game.Players.LocalPlayer;
+	local v63 = v62.Character or v62.CharacterAdded:Wait();
+	local v64 = v63:WaitForChild(v7("\133\109\180\129\61\162\113\189\178\60\162\108\137\129\33\185", "\83\205\24\217\224"));
+	local v65 = workspace:WaitForChild(v7("\196\208\217\41\227\215\203\49\255\247\227\26", "\93\134\165\173")):WaitForChild(v7("\141\226\192\213\52\221", "\30\222\146\161\162\90\174\210"));
+	local v66 = {v7("\199\91\100\30\224\92\118\6\252\31", "\106\133\46\16"),v7("\122\53\103\232\95\82\94\44\106\174", "\32\56\64\19\156\58"),v7("\120\221\241\66\95\224\134\86\209\182", "\224\58\168\133\54\58\146"),v7("\123\67\95\233\112\148\129\7\64\2", "\107\57\54\43\157\21\230\231"),v7("\249\158\5\225\188\206\201\215\146\68", "\175\187\235\113\149\217\188"),v7("\30\186\149\88\230\107\126\48\182\215", "\24\92\207\225\44\131\25"),v7("\105\198\172\88\30\111\77\223\161\27", "\29\43\179\216\44\123"),v7("\159\204\52\88\184\203\38\64\164\129", "\44\221\185\64"),v7("\35\242\92\75\118\19\225\68\70\42", "\19\97\135\40\63"),v7("\140\73\39\47\42\35\168\80\42\106\127", "\81\206\60\83\91\79"),v7("\108\190\196\102\42\209\75\168\87\250\129", "\196\46\203\176\18\79\163\45"),v7("\154\55\106\10\33\233\233\180\59\47\76", "\143\216\66\30\126\68\155"),v7("\136\221\25\223\192\177\209\237\179\153\94", "\129\202\168\109\171\165\195\183"),v7("\0\77\35\204\219\6\224\46\65\102\140", "\134\66\56\87\184\190\116"),v7("\30\36\29\175\28\249\39\57\37\96\92", "\85\92\81\105\219\121\139\65")};
+	for v158, v159 in ipairs(v66) do
+		local v160 = 826 - (802 + 24);
+		local v161;
+		while true do
+			if (v160 == 0) then
+				v161 = v65:FindFirstChild(v159);
+				if v161 then
+					local v238 = 0 - 0;
+					local v239;
+					while true do
+						if (v238 == (0 - 0)) then
+							v239 = 0 + 0;
+							while true do
+								if (v239 == (0 + 0)) then
+									v64.CFrame = v161.CFrame + Vector3.new(0 + 0, 1 + 1, 0);
+									task.wait(0.25 - 0);
+									v239 = 3 - 2;
+								end
+								if (v239 == (1 + 0)) then
+									for v275, v276 in pairs(v161:GetDescendants()) do
+										if v276:IsA(v7("\205\161\95\93\117\210\244\167\73\117\110\208\240\163\68", "\191\157\211\48\37\28")) then
+											local v281 = 0 + 0;
+											while true do
+												if ((0 + 0) == v281) then
+													v276.HoldDuration = 0;
+													fireproximityprompt(v276);
+													break;
+												end
+											end
+										end
+									end
+									break;
+								end
+							end
+							break;
+						end
+					end
+				end
+				break;
+			end
+		end
+	end
+end);
+v13:Divider(v7("\239\30\230\8\122\140", "\90\191\127\148\124"));
+v13:Button(v7("\95\130\58\87\108\143\43\87\81\147\43\26\107", "\119\24\231\78"), function()
+	wait(1);
+	local v67 = game.Players.LocalPlayer;
+	local v68 = v67.Character or v67.CharacterAdded:Wait();
+	local v69 = v68:WaitForChild(v7("\170\56\168\75\210\79\24\134\31\170\69\200\112\16\144\57", "\113\226\77\197\42\188\32"));
+	local v70 = workspace:WaitForChild(v7("\29\23\249\176\19\24\242\186", "\213\90\118\148")):WaitForChild(v7("\107\59\174\76\65\94\7\160\83\64\72", "\45\59\78\212\54"));
+	local v71 = {v7("\55\68\130\137\175\58\168\253\49", "\144\112\54\227\235\230\78\205"),v7("\148\58\14\254\249\79\182\37\45", "\59\211\72\111\156\176"),v7("\105\149\226\47\103\147\230\32\109", "\77\46\231\131"),v7("\157\70\183\66\147\64\179\77\158", "\32\218\52\214"),v7("\105\5\48\170\216\164\64\87\107", "\58\46\119\81\200\145\208\37"),v7("\12\158\49\174\128\169\51\38\170", "\86\75\236\80\204\201\221")};
+	for v162, v163 in ipairs(v71) do
+		local v164 = v70:FindFirstChild(v163);
+		if v164 then
+			local v196 = 0 - 0;
+			local v197;
+			local v198;
+			while true do
+				if (v196 == (0 + 0)) then
+					v197 = v164:FindFirstChildWhichIsA(v7("\80\64\100\128\206\138\96\85", "\235\18\33\23\229\158"), true);
+					v198 = v164:FindFirstChildWhichIsA(v7("\96\168\206\163\89\183\200\175\73\138\211\180\93\170\213", "\219\48\218\161"), true);
+					v196 = 1;
+				end
+				if (v196 == 1) then
+					if (v197 and v198) then
+						local v256 = 0 + 0;
+						local v257;
+						while true do
+							if (v256 == (330 - (192 + 134))) then
+								fireproximityprompt(v198);
+								task.wait(1);
+								break;
+							end
+							if ((1278 - (316 + 960)) == v256) then
+								v69.Anchored = false;
+								v198.HoldDuration = 0;
+								v256 = 2 + 1;
+							end
+							if (v256 == (1 + 0)) then
+								v69.CFrame = CFrame.new(v197.Position.X, v257, v197.Position.Z);
+								task.wait(0.8);
+								v256 = 2 + 0;
+							end
+							if (v256 == (11 - 8)) then
+								v198.RequiresLineOfSight = false;
+								task.wait(0.3);
+								v256 = 555 - (83 + 468);
+							end
+							if (v256 == 0) then
+								v69.Anchored = true;
+								v257 = v197.Position.Y + (v197.Size.Y / 2) + 4;
+								v256 = 1;
+							end
+						end
+					end
+					break;
+				end
+			end
+		end
+	end
+	wait(1);
+	local v67 = game.Players.LocalPlayer;
+	local v68 = v67.Character or v67.CharacterAdded:Wait();
+	local v69 = v68:WaitForChild(v7("\204\100\113\72\213\64\233\224\67\115\70\207\127\225\246\101", "\128\132\17\28\41\187\47"));
+	v69.CFrame = CFrame.new(2512.6072387695312 - (1202 + 604), 74.83944129943848 - 58, 1949.632568359375);
+end);
+v13:Button(v7("\35\39\20\52\29\21\58\3\122\116\21\55\11\41", "\61\97\82\102\90"), function()
+	wait(0.5);
+	local v73 = game.Players.LocalPlayer;
+	local v74 = v73.Character or v73.CharacterAdded:Wait();
+	local v75 = v74:WaitForChild(v7("\132\59\166\74\201\88\23\13\158\33\164\95\247\86\12\29", "\105\204\78\203\43\167\55\126"));
+	local v76 = workspace:WaitForChild(v7("\146\175\47\18", "\49\197\202\67\126\115\100\167"));
+	local v77 = v76:FindFirstChildWhichIsA(v7("\21\90\204\44\176\87\76\35", "\62\87\59\191\73\224\54"), true);
+	local v78 = v76:FindFirstChildWhichIsA(v7("\215\16\245\209\238\15\243\221\254\50\232\198\234\18\238", "\169\135\98\154"), true);
+	if (v77 and v78) then
+		local v179 = 0 - 0;
+		local v180;
+		while true do
+			if (v179 == (5 - 3)) then
+				v78.HoldDuration = 325 - (45 + 280);
+				v78.RequiresLineOfSight = false;
+				v179 = 3 + 0;
+			end
+			if (v179 == 3) then
+				v78.MaxActivationDistance = 18 + 2;
+				task.wait(0.3);
+				v179 = 2 + 2;
+			end
+			if (v179 == (1 + 0)) then
+				task.wait(0.3 + 0);
+				v75.Anchored = true;
+				v179 = 3 - 1;
+			end
+			if (0 == v179) then
+				v180 = v77.Position.Y + (v77.Size.Y / (1913 - (340 + 1571))) + 2 + 1;
+				v75.CFrame = CFrame.new(v77.Position.X, v180, v77.Position.Z);
+				v179 = 1773 - (1733 + 39);
+			end
+			if (v179 == (10 - 6)) then
+				for v240 = 1, 1040 - (125 + 909) do
+					fireproximityprompt(v78);
+					task.wait(1948.25 - (1096 + 852));
+				end
+				break;
+			end
+		end
+	end
+	wait(4 + 3);
+	v75.Anchored = false;
+	wait(1 - 0);
+	local v73 = game.Players.LocalPlayer;
+	local v74 = v73.Character or v73.CharacterAdded:Wait();
+	local v75 = v74:WaitForChild(v7("\227\98\41\85\243\60\193\207\69\43\91\233\3\201\217\99", "\168\171\23\68\52\157\83"));
+	v75.CFrame = CFrame.new(685.6072387695312 + 21, 528.8394412994385 - (409 + 103), 2185.632568359375 - (46 + 190));
+end);
+v13:Divider(v7("\196\112\231\185\101\121", "\231\148\17\149\205\69\77"));
+v13:Button(v7("\161\178\211\244\84\240\141\183\203\254\67\250", "\159\224\199\167\155\55"), function()
+	local v81 = game.Players.LocalPlayer;
+	local v82 = v81.Character or v81.CharacterAdded:Wait();
+	local v83 = v82:WaitForChild(v7("\223\230\49\211\249\252\53\214\197\252\51\198\199\242\46\198", "\178\151\147\92"));
+	local v84 = v82:WaitForChild(v7("\164\232\65\51\28\67\115\136", "\26\236\157\44\82\114\44"));
+	local v85 = workspace:WaitForChild(v7("\2\43\212\73\62\61", "\59\74\78\181"));
+	local v86 = 105 - (51 + 44);
+	v84.AutoRotate = false;
+	local v88 = Instance.new(v7("\7\222\94\67\133\32\221\85\89\186\49\200", "\211\69\177\58\58"));
+	v88.MaxForce = Vector3.new(0 + 0, 101317 - (1114 + 203), 726 - (228 + 498));
+	v88.Parent = v83;
+	local function v91()
+		local v165 = 0 + 0;
+		local v166;
+		local v167;
+		while true do
+			if (v165 == (0 + 0)) then
+				v166 = v81:WaitForChild(v7("\149\228\122\254\249\202\180\238", "\171\215\133\25\149\137"));
+				v167 = v166:FindFirstChild(v7("\205\201\60\238\234\34\242", "\34\129\168\82\154\143\80\156")) or v82:FindFirstChild(v7("\169\179\61\31\77\92\135", "\233\229\210\83\107\40\46"));
+				v165 = 664 - (174 + 489);
+			end
+			if (v165 == (2 - 1)) then
+				if v167 then
+					local v241 = 1905 - (830 + 1075);
+					local v242;
+					while true do
+						if (v241 == (524 - (303 + 221))) then
+							v242 = 1269 - (231 + 1038);
+							while true do
+								if (v242 == 0) then
+									v167.Parent = v82;
+									return v167;
+								end
+							end
+							break;
+						end
+					end
+				end
+				break;
+			end
+		end
+	end
+	local function v92(v168)
+		while v168 and (v168.Parent == v82) do
+			local v181 = 0 + 0;
+			while true do
+				if (v181 == (1162 - (171 + 991))) then
+					v168:Activate();
+					task.wait();
+					break;
+				end
+			end
+		end
+	end
+	local function v93(v169)
+		if v169:IsA(v7("\227\67\33\211\53\192\80\38", "\101\161\34\82\182")) then
+			return v169.Position;
+		else
+			return v169:GetPivot().Position;
+		end
+	end
+	local v94 = v91();
+	if v94 then
+		task.spawn(function()
+			v92(v94);
+		end);
+	end
+	local v95 = v85:GetChildren();
+	for v170 = #v95, 8 - 6, -1 do
+		local v171 = math.random(v170);
+		v95[v170], v95[v171] = v95[v171], v95[v170];
+	end
+	for v174, v175 in ipairs(v95) do
+		local v176 = v93(v175);
+		local v177 = v175:FindFirstChild(v7("\192\8\88\242\207\234", "\78\136\109\57\158\187\130\226"), true);
+		if (v176 and v177) then
+			local v199 = 0;
+			while true do
+				if (v199 == (2 - 1)) then
+					repeat
+						local v248 = v176.Y + v86;
+						local v249 = v83.Position.Y;
+						v88.Velocity = Vector3.new(0 - 0, (v248 - v249) * (5 + 0), 0);
+						v83.CFrame = CFrame.new(v176.X, v83.Position.Y, v176.Z);
+						task.wait(0.1 - 0);
+					until (v177.Value or (0 - 0)) <= 0 
+					task.wait(1);
+					break;
+				end
+				if (0 == v199) then
+					v83.CFrame = CFrame.new(v176 + Vector3.new(0, v86, 0 - 0));
+					task.wait(0.2);
+					v199 = 3 - 2;
+				end
+			end
+		end
+	end
+	v88:Destroy();
+	v84.AutoRotate = true;
+end);
+v13:Button(v7("\10\58\245\244\46\48\235\229\126\43\246\177\13\62\255\244\126\15\245\240\61\58", "\145\94\95\153"), function()
+	local v96 = 1248 - (111 + 1137);
+	local v97;
+	local v98;
+	local v99;
+	while true do
+		if (v96 == 0) then
+			v97 = game.Players.LocalPlayer;
+			v98 = v97.Character or v97.CharacterAdded:Wait();
+			v96 = 159 - (91 + 67);
+		end
+		if (v96 == (2 - 1)) then
+			v99 = v98:WaitForChild(v7("\213\216\25\212\64\184\244\201\38\218\65\163\205\204\6\193", "\215\157\173\116\181\46"));
+			v99.CFrame = CFrame.new(733.09423828125 + 2202, 132.13388061523438, 2271.1533203125 - (423 + 100));
 			break;
 		end
 	end
-end
-v18.InputBegan:Connect(function(v79)
-	if (v79.UserInputType == Enum.UserInputType.MouseButton1) then
-		local v141 = 0 - 0;
-		local v142;
-		while true do
-			if ((0 + 0) == v141) then
-				v142 = 0 + 0;
-				while true do
-					if ((850 - (20 + 830)) == v142) then
-						v23 = true;
-						v25 = v79.Position;
-						v142 = 1;
-					end
-					if (v142 == (1 + 0)) then
-						v26 = v18.Position;
-						v79.Changed:Connect(function()
-							if (v79.UserInputState == Enum.UserInputState.End) then
-								v23 = false;
-							end
-						end);
-						break;
-					end
-				end
-				break;
-			end
-		end
-	end
 end);
-v18.InputChanged:Connect(function(v80)
-	if (v80.UserInputType == Enum.UserInputType.MouseMovement) then
-		v24 = v80;
-	end
+v9:Divider(v7("\18\181\134\247\215\58\176\142\225", "\186\85\212\235\146"));
+local v14 = v9:Section(v7("\232\136\17\241\50\251", "\56\162\225\118\158\89\142"));
+local v15 = v9:Section(v7("\104\13\197\239\21\209\72\6\200\239\22\202\85\4\204\188", "\184\60\101\160\207\66"));
+local v16 = v9:Section(v7("\18\138\110\181\34\150\113\189\34\194\72\174\56\131\112\175", "\220\81\226\28"));
+local v17 = v9:Section(v7("\59\212\142\247\229\208\22\208\140\187\222\213\26\212\142\232", "\167\115\181\226\155\138"));
+v14:Divider(v7("\200\43\224\83\112\100", "\166\130\66\135\60\27\17"));
+v14:Button(v7("\112\79\194\112\32\75\88\218\53\36\75\10\228\124\55\75\65\219\53\120\119\67\192\114\60\65\90\194\116\41\65\88\135", "\80\36\42\174\21"), function()
+	local v100 = game:GetService(v7("\122\21\59\127\94\31\37\110\125\21\37\108\71\19\50", "\26\46\112\87"));
+	local v101 = game.Players.LocalPlayer;
+	v100:Teleport(138226868948671, v101);
 end);
-v10.InputChanged:Connect(function(v81)
-	if ((v81 == v24) and v23) then
-		v27(v81);
-	end
-end);
-local v28 = Instance.new(v7("\130\236\50\223\52\175\49\194\186", "\167\214\137\74\171\120\206\83"), v18);
-v28.Size = UDim2.new(127 - (116 + 10), 0, 0 + 0, 788 - (542 + 196));
-v28.Position = UDim2.new(0, 0 - 0, 0 + 0, 0 + 0);
-v28.Text = v7("\191\248\55\29\213\174\134\249\49\29\213\162\134\255\32\84\253\180", "\199\235\144\82\61\152");
-v28.Font = Enum.Font.GothamBold;
-v28.TextSize = 11 + 17;
-v28.BackgroundTransparency = 1;
-v28.TextColor3 = Color3.fromRGB(0 - 0, 0, 0 - 0);
-local v37 = Instance.new(v7("\33\4\184\38\2", "\75\103\118\217"), v18);
-v37.Size = UDim2.new(0, 1701 - (1126 + 425), 406 - (118 + 287), -(195 - 145));
-v37.Position = UDim2.new(0, 1121 - (118 + 1003), 0 - 0, 427 - (142 + 235));
-v37.BackgroundColor3 = Color3.fromRGB(245, 1111 - 866, 54 + 191);
-Instance.new(v7("\242\125\83\27\171\16\194\70", "\126\167\52\16\116\217"), v37);
-local v41 = {};
-local function v42(v82, v83)
-	local v84 = 977 - (553 + 424);
-	local v85;
-	local v86;
-	while true do
-		local v133 = 0;
-		while true do
-			if (v133 == (1 - 0)) then
-				if (v84 == 1) then
-					v85.Text = v82;
-					v85.Font = Enum.Font.GothamBold;
-					v85.TextSize = 20;
-					v84 = 2 + 0;
-				end
-				if ((5 + 0) == v84) then
-					return v86;
-				end
-				v133 = 2;
-			end
-			if (v133 == 0) then
-				if ((2 + 0) == v84) then
-					v85.BackgroundColor3 = Color3.fromRGB(255, 109 + 146, 146 + 109);
-					Instance.new(v7("\50\199\134\193\21\224\160\220", "\174\103\142\197"), v85);
-					v86 = Instance.new(v7("\112\58\94\53\32", "\152\54\72\63\88\69\62"), v18);
-					v84 = 6 - 3;
-				end
-				if (v84 == (11 - 7)) then
-					v86.Visible = false;
-					v85.MouseButton1Click:Connect(function()
-						local v203 = 0 - 0;
-						while true do
-							if (v203 == (0 + 0)) then
-								for v223, v224 in pairs(v41) do
-									v224.Visible = false;
-								end
-								v86.Visible = true;
-								break;
-							end
-						end
-					end);
-					v41[v82] = v86;
-					v84 = 24 - 19;
-				end
-				v133 = 754 - (239 + 514);
-			end
-			if (v133 == (1 + 1)) then
-				if (v84 == (1332 - (797 + 532))) then
-					v86.Size = UDim2.new(1 + 0, -170, 1 + 0, -(164 - 94));
-					v86.Position = UDim2.new(0, 1362 - (373 + 829), 731 - (476 + 255), 1190 - (369 + 761));
-					v86.BackgroundTransparency = 1 + 0;
-					v84 = 6 - 2;
-				end
-				if (v84 == (0 - 0)) then
-					v85 = Instance.new(v7("\252\43\56\148\150\12\232\220\33\46", "\156\168\78\64\224\212\121"), v37);
-					v85.Size = UDim2.new(239 - (64 + 174), 0 + 0, 0 - 0, 381 - (144 + 192));
-					v85.Position = UDim2.new(0, 216 - (42 + 174), 0 + 0, (v83 - (1 + 0)) * (20 + 25));
-					v84 = 1;
-				end
-				break;
-			end
-		end
-	end
-end
-local v43 = v42(v7("\247\204\239\76\192\193\252\28\133", "\60\180\164\142"), 1);
-local v44 = v42(v7("\123\86\4\57\51\232\0\24\12", "\114\56\62\101\73\71\141"), 2);
-local v45 = v42(v7("\155\225\218\212\172\236\201\132\235", "\164\216\137\187"), 1507 - (363 + 1141));
-local v46 = v42(v7("\241\238\48\162\178\251\25\146\178", "\107\178\134\81\210\198\158"), 4);
-local v47 = v42(v7("\12\6\135\134\157\49\26\129\206\234\12\28\139\199\166\43", "\202\88\110\226\166"), 1585 - (1183 + 397));
-local v48 = v42(v7("\224\7\144\254\217\215\2\131\228\138\247\29\139\246\198\208", "\170\163\111\226\151"), 18 - 12);
-local v49 = v42(v7("\57\49\190\52\65\32\44\20\62\242\12\92\62\40\29\35", "\73\113\80\210\88\46\87"), 6 + 1);
-local v50 = v42(v7("\172\37\222\17", "\135\225\76\173\114"), 6 + 2);
-v43.Visible = true;
-local function v52(v87, v88, v89, v90)
-	local v91 = Instance.new(v7("\46\232\160\164\142\168\179\14\226\182", "\199\122\141\216\208\204\221"), v87);
-	v91.Size = UDim2.new(1976 - (1913 + 62), -20, 0, 26 + 14);
-	v91.Position = UDim2.new(0 - 0, 1943 - (565 + 1368), 0 - 0, v89);
-	v91.Text = v88;
-	v91.Font = Enum.Font.GothamBold;
-	v91.TextSize = 1683 - (1477 + 184);
-	v91.BackgroundColor3 = Color3.fromRGB(346 - 91, 255, 238 + 17);
-	Instance.new(v7("\152\244\51\255\106\248\168\207", "\150\205\189\112\144\24"), v91);
-	v91.MouseButton1Click:Connect(v90);
-	return v91;
-end
-local function v53(v99, v100, v101)
-	local v102 = 0;
+v14:Divider("Part 1 (Death's Challenge)");
+v14:Button("Talk to Hiachi (For Hiachi's Request)", function()
+	local v102 = 0 + 0;
 	local v103;
+	local v104;
+	local v105;
+	local v106;
+	local v107;
 	while true do
-		if (v102 == 4) then
-			v103.TextColor3 = Color3.fromRGB(856 - (564 + 292), 0 - 0, 0 - 0);
-			return v103;
+		if ((2 - 1) == v102) then
+			v105 = workspace:WaitForChild(v7("\151\19\136", "\212\217\67\203\20\223\223\37"));
+			v106 = v105:WaitForChild(v7("\146\152\165\211\180\130\161\214\136\130\167\198\138\140\186\198", "\178\218\237\200"));
+			v102 = 2 + 0;
 		end
 		if (v102 == 2) then
-			v103.Font = Enum.Font.GothamBold;
-			v103.TextSize = 328 - (244 + 60);
+			v104:PivotTo(v106.CFrame + Vector3.new(771 - (326 + 445), 13 - 10, 0 - 0));
+			v107 = v106:FindFirstChildWhichIsA(v7("\134\167\233\200\191\184\239\196\175\133\244\223\187\165\242", "\176\214\213\134"), true);
 			v102 = 3;
 		end
-		if (v102 == 3) then
-			v103.TextXAlignment = Enum.TextXAlignment.Left;
-			v103.BackgroundTransparency = 1;
-			v102 = 4;
-		end
-		if (v102 == 1) then
-			v103.Position = UDim2.new(0 + 0, 10, 476 - (41 + 435), v101);
-			v103.Text = v100;
-			v102 = 1003 - (938 + 63);
-		end
-		if (v102 == 0) then
-			v103 = Instance.new(v7("\17\129\167\88\40\137\19\21\41", "\112\69\228\223\44\100\232\113"), v99);
-			v103.Size = UDim2.new(1 + 0, -20, 0, 35);
-			v102 = 1126 - (936 + 189);
-		end
-	end
-end
-v53(v43, v7("\228\30\21\199\246\45", "\230\180\127\103\179\214\28"), 4 + 6);
-v52(v43, v7("\173\16\75\73\231\78\237\156\9\90\82\225", "\128\236\101\63\38\132\33"), 1663 - (1565 + 48), function()
-	local v104 = 0 + 0;
-	local v105;
-	while true do
-		if (v104 == (1138 - (782 + 356))) then
-			v105 = v8.Character;
-			if v105 then
-				v105:WaitForChild(v7("\132\188\28\69\184\228\198\168\155\30\75\162\219\206\190\189", "\175\204\201\113\36\214\139")).CFrame = CFrame.new(3730.9453 - (176 + 91), 95.40337 - 58, -(2266.2567 - 728));
-			end
-			break;
-		end
-	end
-end);
-v53(v43, v7("\109\197\50\211\15\82", "\100\39\172\85\188"), 110);
-v52(v43, v7("\153\125\181\133\35\162\106\173", "\83\205\24\217\224"), 1242 - (975 + 117), function()
-	local v106 = v8.Character;
-	if v106 then
-		v106:WaitForChild(v7("\206\208\192\60\232\202\196\57\212\202\194\41\214\196\223\41", "\93\134\165\173")).CFrame = CFrame.new(2703.66278 - (157 + 1718), 3.25 + 0, 738.2068899999999 - 530);
-	end
-end);
-v53(v43, v7("\142\243\211\214\122\156", "\30\222\146\161\162\90\174\210"), 210);
-v52(v43, v7("\196\91\100\5\230\65\125\26\233\75\100\15", "\106\133\46\16"), 854 - 604, function()
-	local v107 = 0;
-	local v108;
-	while true do
-		if (v107 == (1018 - (697 + 321))) then
-			v108 = v8.Character;
-			if v108 then
-				v108:WaitForChild(v7("\112\53\126\253\84\79\81\36\65\243\85\84\104\33\97\232", "\32\56\64\19\156\58")).CFrame = CFrame.new(3475.1339 - 2199, 421.53998 - 222, -(5848.6679 - 3311));
-			end
-			break;
-		end
-	end
-end);
-local v54;
-local v55 = 60;
-local v56;
-local v57;
-local v58;
-local v59 = {F=(0 + 0),B=(0 - 0),L=(0 - 0),R=0,U=0,D=(1227 - (322 + 905))};
-local function v60()
-	local v109 = v8.Character;
-	if not v109 then
-		return;
-	end
-	local v110 = v109:FindFirstChild(v7("\114\221\232\87\84\253\137\94\250\234\89\78\194\129\72\220", "\224\58\168\133\54\58\146"));
-	if not v110 then
-		return;
-	end
-	v56 = Instance.new(v7("\123\89\79\228\67\131\139\4\90\95\95\228", "\107\57\54\43\157\21\230\231"));
-	v56.MaxForce = Vector3.new(9000000099 - (602 + 9), 9000000677 - (449 + 740), 8999999488);
-	v56.Parent = v110;
-	v57 = Instance.new(v7("\249\132\21\236\158\197\221\212", "\175\187\235\113\149\217\188"));
-	v57.MaxTorque = Vector3.new(9000000360 - (826 + 46), 9000000435 - (245 + 702), 8999999488 - 0);
-	v57.Parent = v110;
-	v58 = v11.RenderStepped:Connect(function()
-		local v134 = workspace.CurrentCamera;
-		local v135 = Vector3.new();
-		if (v59.F == 1) then
-			v135 += v134.CFrame.LookVector
-		end
-		if (v59.B == 1) then
-			v135 -= v134.CFrame.LookVector
-		end
-		if (v59.L == (1 + 0)) then
-			v135 -= v134.CFrame.RightVector
-		end
-		if (v59.R == (1899 - (260 + 1638))) then
-			v135 += v134.CFrame.RightVector
-		end
-		if (v59.U == (441 - (382 + 58))) then
-			v135 += Vector3.new(0, 3 - 2, 0 + 0)
-		end
-		if (v59.D == (1 - 0)) then
-			v135 -= Vector3.new(0 - 0, 1206 - (902 + 303), 0)
-		end
-		v56.Velocity = v135 * v55;
-		v57.CFrame = v134.CFrame;
-	end);
-end
-local function v61()
-	local v115 = 0 - 0;
-	while true do
-		if ((2 - 1) == v115) then
-			if v57 then
-				v57:Destroy();
-			end
-			break;
-		end
-		if (v115 == (0 + 0)) then
-			if v58 then
-				v58:Disconnect();
-			end
-			if v56 then
-				v56:Destroy();
-			end
-			v115 = 1691 - (1121 + 569);
-		end
-	end
-end
-v10.InputBegan:Connect(function(v116, v117)
-	if v117 then
-		return;
-	end
-	if (v116.KeyCode == Enum.KeyCode.W) then
-		v59.F = 1;
-	end
-	if (v116.KeyCode == Enum.KeyCode.S) then
-		v59.B = 215 - (22 + 192);
-	end
-	if (v116.KeyCode == Enum.KeyCode.A) then
-		v59.L = 684 - (483 + 200);
-	end
-	if (v116.KeyCode == Enum.KeyCode.D) then
-		v59.R = 1464 - (1404 + 59);
-	end
-	if (v116.KeyCode == Enum.KeyCode.Space) then
-		v59.U = 1;
-	end
-	if (v116.KeyCode == Enum.KeyCode.LeftControl) then
-		v59.D = 2 - 1;
-	end
-end);
-v10.InputEnded:Connect(function(v118)
-	local v119 = 0 - 0;
-	while true do
-		if (v119 == (767 - (468 + 297))) then
-			if (v118.KeyCode == Enum.KeyCode.Space) then
-				v59.U = 562 - (334 + 228);
-			end
-			if (v118.KeyCode == Enum.KeyCode.LeftControl) then
-				v59.D = 0 - 0;
-			end
-			break;
-		end
-		if (v119 == (0 - 0)) then
-			if (v118.KeyCode == Enum.KeyCode.W) then
-				v59.F = 0 - 0;
-			end
-			if (v118.KeyCode == Enum.KeyCode.S) then
-				v59.B = 0 + 0;
-			end
-			v119 = 237 - (141 + 95);
-		end
-		if (v119 == (1 + 0)) then
-			if (v118.KeyCode == Enum.KeyCode.A) then
-				v59.L = 0 - 0;
-			end
-			if (v118.KeyCode == Enum.KeyCode.D) then
-				v59.R = 0;
-			end
-			v119 = 2;
-		end
-	end
-end);
-v54 = v52(v50, v7("\26\163\152\12\204\95\94", "\24\92\207\225\44\131\25"), 24 - 14, function()
-	local v120 = 0 + 0;
-	local v121;
-	while true do
-		if (v120 == (0 - 0)) then
-			v121 = 0 + 0;
+		if (v102 == (0 - 0)) then
+			local v202 = 711 - (530 + 181);
+			local v203;
 			while true do
-				if (v121 == (0 + 0)) then
-					v13.Fly = not v13.Fly;
-					if v13.Fly then
-						local v211 = 0 - 0;
-						local v212;
+				if ((881 - (614 + 267)) == v202) then
+					v203 = 32 - (19 + 13);
+					while true do
+						if (0 == v203) then
+							v103 = game.Players.LocalPlayer;
+							v104 = v103.Character or v103.CharacterAdded:Wait();
+							v203 = 1 - 0;
+						end
+						if (v203 == (2 - 1)) then
+							v102 = 1;
+							break;
+						end
+					end
+					break;
+				end
+			end
+		end
+		if (v102 == (8 - 5)) then
+			if v107 then
+				local v225 = 0 + 0;
+				while true do
+					if (0 == v225) then
+						wait(1 - 0);
+						fireproximityprompt(v107);
+						break;
+					end
+				end
+			end
+			break;
+		end
+	end
+end);
+v14:Button(v7("\192\191\191\211\175\83\75\180\158\190\221\166\95\94\245\160\191\148\139\67\77\231\174\179\218\173", "\57\148\205\214\180\200\54"), function()
+	local v108 = 0 - 0;
+	local v109;
+	local v110;
+	local v111;
+	local v112;
+	local v113;
+	while true do
+		if ((1812 - (1293 + 519)) == v108) then
+			v109 = 0 - 0;
+			v110 = nil;
+			v108 = 2 - 1;
+		end
+		if (v108 == (3 - 1)) then
+			v113 = nil;
+			while true do
+				if (v109 == (0 - 0)) then
+					v110 = game.Players.LocalPlayer;
+					v111 = v110.Character or v110.CharacterAdded:Wait();
+					v109 = 2 - 1;
+				end
+				if (v109 == (1 + 0)) then
+					v112 = v111:WaitForChild(v7("\58\232\56\53\120\29\244\49\6\121\29\233\5\53\100\6", "\22\114\157\85\84"));
+					v113 = Vector3.new(-88.95520782470703, 67.89419555664062, 87.36959838867188 + 339);
+					v109 = 4 - 2;
+				end
+				if (v109 == 2) then
+					v112.CFrame = CFrame.new(v113);
+					break;
+				end
+			end
+			break;
+		end
+		if ((1 + 0) == v108) then
+			v111 = nil;
+			v112 = nil;
+			v108 = 1 + 1;
+		end
+	end
+end);
+v14:Button(v7("\229\222\7\203\94\249\165\212\199\22\208\88", "\200\164\171\115\164\61\150"), function()
+	local v114 = game.Players.LocalPlayer;
+	local v115 = v114.Character or v114.CharacterAdded:Wait();
+	local v116 = v115:WaitForChild(v7("\150\225\14\68\141\177\253\7\119\140\177\224\51\68\145\170", "\227\222\148\99\37"));
+	local v117 = workspace:WaitForChild(v7("\28\64\80\229", "\153\83\50\50\150"));
+	local v118 = Vector3.new(-(57.875335693359375 + 34), 1169.0624771118164 - (709 + 387), -(2482.6427612304688 - (673 + 1185)));
+	while true do
+		local v178 = 0 - 0;
+		for v182, v183 in ipairs(v117:GetChildren()) do
+			local v184 = 0 - 0;
+			local v185;
+			while true do
+				if (v184 == (0 - 0)) then
+					v185 = v183:FindFirstChildWhichIsA(v7("\109\100\124\4\122\166\68\73\111\67\14\124\166\93\73", "\45\61\22\19\124\19\203"), true);
+					if v185 then
+						local v252 = 0 + 0;
+						local v253;
+						local v254;
+						local v255;
 						while true do
-							if (v211 == (0 + 0)) then
-								v212 = 0;
-								while true do
-									if (v212 == 0) then
-										v54.Text = v7("\109\223\161\12\52\83", "\29\43\179\216\44\123");
-										v60();
-										break;
+							if (v252 == 0) then
+								v253 = v183.Position + Vector3.new(0 + 0, 5 - 1, 0 + 0);
+								v116.CFrame = CFrame.new(v253);
+								v252 = 1;
+							end
+							if ((1 - 0) == v252) then
+								v185.HoldDuration = 0;
+								v254 = 0.3 - 0;
+								v252 = 2;
+							end
+							if (v252 == 3) then
+								fireproximityprompt(v185);
+								v178 += (1881 - (446 + 1434))
+								v252 = 1287 - (1040 + 243);
+							end
+							if (v252 == (5 - 3)) then
+								v255 = tick();
+								while (tick() - v255) < v254 do
+									local v270 = 1847 - (559 + 1288);
+									while true do
+										if (v270 == (1931 - (609 + 1322))) then
+											v116.CFrame = CFrame.new(v253);
+											task.wait(454.05 - (13 + 441));
+											break;
+										end
 									end
 								end
-								break;
+								v252 = 3;
 							end
-						end
-					else
-						local v213 = 163 - (92 + 71);
-						while true do
-							if (v213 == (0 + 0)) then
-								v54.Text = v7("\155\213\57\12\146\255\6", "\44\221\185\64");
-								v61();
+							if (v252 == (14 - 10)) then
+								task.wait(0.5 - 0);
 								break;
 							end
 						end
@@ -417,250 +624,305 @@ v54 = v52(v50, v7("\26\163\152\12\204\95\94", "\24\92\207\225\44\131\25"), 24 - 
 					break;
 				end
 			end
+		end
+		if (v178 >= 35) then
+			v116.CFrame = CFrame.new(v118);
 			break;
 		end
 	end
 end);
-local v62;
-v62 = v52(v50, v7("\47\232\75\83\122\17\167\103\121\85", "\19\97\135\40\63"), 117 - 47, function()
-	v13.Noclip = not v13.Noclip;
-	if v13.Noclip then
-		v62.Text = v7("\128\83\48\55\38\33\238\115\29", "\81\206\60\83\91\79");
-	else
-		v62.Text = v7("\96\164\211\126\38\211\13\139\104\141", "\196\46\203\176\18\79\163\45");
-	end
-end);
-v11.Stepped:Connect(function()
-	if v13.Noclip then
-		local v152 = 765 - (574 + 191);
-		local v153;
-		while true do
-			if (v152 == (0 + 0)) then
-				v153 = v8.Character;
-				if v153 then
-					for v214, v215 in pairs(v153:GetDescendants()) do
-						if v215:IsA(v7("\154\35\109\27\20\250\253\172", "\143\216\66\30\126\68\155")) then
-							v215.CanCollide = false;
-						end
-					end
-				end
-				break;
-			end
-		end
-	end
-end);
-local v63;
-local v64 = {};
-local function v65(v123)
-	if (v123:FindFirstChild(v7("\130\221\0\202\203\172\222\229", "\129\202\168\109\171\165\195\183")) and (v123 ~= v8.Character) and not game.Players:GetPlayerFromCharacter(v123)) then
-		if v123:FindFirstChild(v7("\10\77\58\217\208\27\239\38\106\56\215\202\36\231\48\76", "\134\66\56\87\184\190\116")) then
-			local v172 = 0 - 0;
-			local v173;
-			while true do
-				if (v172 == (2 + 0)) then
-					v173.Parent = v123;
-					table.insert(v64, v173);
-					break;
-				end
-				if (v172 == 1) then
-					v173.OutlineColor = Color3.fromRGB(1104 - (254 + 595), 381 - (55 + 71), 335 - 80);
-					v173.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
-					v172 = 1792 - (573 + 1217);
-				end
-				if (v172 == (0 - 0)) then
-					v173 = Instance.new(v7("\20\56\14\179\21\226\38\61\40", "\85\92\81\105\219\121\139\65"));
-					v173.FillColor = Color3.fromRGB(20 + 235, 0, 0);
-					v172 = 1 - 0;
-				end
-			end
-		end
-	end
-end
-local function v66()
-	for v139, v140 in pairs(workspace:GetDescendants()) do
-		if v140:IsA(v7("\208\188\84\64\112", "\191\157\211\48\37\28")) then
-			v65(v140);
-		end
-	end
-end
-local function v67()
-	local v124 = 939 - (714 + 225);
+v14:Divider("Part 2 (Hiachi's Request)");
+v14:Button(v7("\224\7\25\250\1\127\180\209\30\8\225\7", "\217\161\114\109\149\98\16"), function()
+	local v119 = 0;
+	local v120;
+	local v121;
+	local v122;
+	local v123;
+	local v124;
 	while true do
-		if (v124 == (0 - 0)) then
-			for v174, v175 in pairs(v64) do
-				if v175 then
-					v175:Destroy();
+		if ((9 - 7) == v119) then
+			v124 = Vector3.new(-91.87533569335938, 3.0624771118164062 + 70, -(2266.6427612304688 - 1642));
+			while true do
+				local v219 = 0 + 0;
+				for v226, v227 in ipairs(v123:GetChildren()) do
+					local v228 = 0 + 0;
+					local v229;
+					while true do
+						if (v228 == (0 - 0)) then
+							v229 = v227:FindFirstChildWhichIsA(v7("\253\245\18\227\19\192\238\9\226\42\223\232\16\235\14", "\122\173\135\125\155"), true);
+							if v229 then
+								local v261 = 0;
+								local v262;
+								local v263;
+								local v264;
+								while true do
+									if (v261 == (3 + 1)) then
+										task.wait(0.5);
+										break;
+									end
+									if (v261 == 1) then
+										v229.HoldDuration = 0;
+										v263 = 0.5;
+										v261 = 3 - 1;
+									end
+									if (v261 == (2 + 1)) then
+										fireproximityprompt(v229);
+										v219 += 1
+										v261 = 4;
+									end
+									if (v261 == (2 + 0)) then
+										v264 = tick();
+										while (tick() - v264) < v263 do
+											local v280 = 0;
+											while true do
+												if (v280 == 0) then
+													v122.CFrame = CFrame.new(v262);
+													task.wait(0.05 + 0);
+													break;
+												end
+											end
+										end
+										v261 = 3 + 0;
+									end
+									if (v261 == (0 + 0)) then
+										v262 = v227.Position + Vector3.new(433 - (153 + 280), 11 - 7, 0 + 0);
+										v122.CFrame = CFrame.new(v262);
+										v261 = 1 + 0;
+									end
+								end
+							end
+							break;
+						end
+					end
+				end
+				if (v219 >= (7 + 6)) then
+					v122.CFrame = CFrame.new(v124);
+					break;
 				end
 			end
-			v64 = {};
 			break;
 		end
+		if (v119 == (0 + 0)) then
+			v120 = game.Players.LocalPlayer;
+			v121 = v120.Character or v120.CharacterAdded:Wait();
+			v119 = 1 + 0;
+		end
+		if (v119 == (1 - 0)) then
+			v122 = v121:WaitForChild(v7("\58\53\53\125\178\123\27\36\10\115\179\96\34\33\42\104", "\20\114\64\88\28\220"));
+			v123 = workspace:WaitForChild(v7("\30\19\208\167\170", "\221\81\97\178\212\152\176"));
+			v119 = 2 + 0;
+		end
 	end
-end
-v63 = v52(v50, v7("\250\17\241\17\35\159\58\199\44\122\240\57\210", "\90\191\127\148\124"), 181 - 51, function()
+end);
+v14:Button("Get Hiachi's Necklace", function()
 	local v125 = 0;
 	local v126;
-	while true do
-		if (v125 == (0 + 0)) then
-			v126 = 0 - 0;
-			while true do
-				if (v126 == (806 - (118 + 688))) then
-					v13.ESP = not v13.ESP;
-					if v13.ESP then
-						local v216 = 0;
-						local v217;
-						while true do
-							if ((48 - (25 + 23)) == v216) then
-								v217 = 0 + 0;
-								while true do
-									if (v217 == (1886 - (927 + 959))) then
-										v63.Text = v7("\93\137\43\26\97\199\11\36\72\199\1\57", "\119\24\231\78");
-										v66();
-										break;
-									end
-								end
-								break;
-							end
-						end
-					else
-						v63.Text = v7("\167\35\160\71\197\0\52\177\29\229\101\250\102", "\113\226\77\197\42\188\32");
-						v67();
-					end
-					break;
-				end
-			end
-			break;
-		end
-	end
-end);
-local v68;
-local v69 = v12.Brightness;
-local v70 = v12.ClockTime;
-local v71 = v12.FogEnd;
-local v72 = v12.GlobalShadows;
-v68 = v52(v50, v7("\28\3\248\185\56\4\253\178\50\2\180\154\28\48", "\213\90\118\148"), 190, function()
-	local v127 = 0 - 0;
-	while true do
-		if (v127 == 0) then
-			v13.Fullbright = not v13.Fullbright;
-			if v13.Fullbright then
-				local v185 = 732 - (16 + 716);
-				local v186;
-				while true do
-					if (v185 == 0) then
-						v186 = 0 - 0;
-						while true do
-							if (v186 == 2) then
-								v12.GlobalShadows = false;
-								break;
-							end
-							if (v186 == (98 - (11 + 86))) then
-								v12.ClockTime = 33 - 19;
-								v12.FogEnd = 100285 - (175 + 110);
-								v186 = 4 - 2;
-							end
-							if (v186 == (0 - 0)) then
-								v68.Text = v7("\125\59\184\90\79\73\39\179\94\89\27\1\154", "\45\59\78\212\54");
-								v12.Brightness = 1801 - (503 + 1293);
-								v186 = 2 - 1;
-							end
-						end
-						break;
-					end
-				end
-			else
-				local v187 = 0 + 0;
-				local v188;
-				while true do
-					if (v187 == (1061 - (810 + 251))) then
-						v188 = 0 + 0;
-						while true do
-							if (v188 == (1 + 1)) then
-								v12.GlobalShadows = v72;
-								break;
-							end
-							if (v188 == (1 + 0)) then
-								v12.ClockTime = v70;
-								v12.FogEnd = v71;
-								v188 = 535 - (43 + 490);
-							end
-							if (v188 == (733 - (711 + 22))) then
-								v68.Text = v7("\54\67\143\135\132\60\164\247\24\66\195\164\160\8", "\144\112\54\227\235\230\78\205");
-								v12.Brightness = v69;
-								v188 = 3 - 2;
-							end
-						end
-						break;
-					end
-				end
-			end
-			break;
-		end
-	end
-end);
-v10.InputBegan:Connect(function(v128, v129)
-	local v130 = 859 - (240 + 619);
+	local v127;
+	local v128;
+	local v129;
+	local v130;
 	local v131;
+	local v132;
+	local v133;
+	local v134;
+	local v135;
+	local v136;
+	local v137;
 	while true do
-		if (v130 == (0 + 0)) then
-			v131 = 0;
+		if (v125 == (668 - (89 + 578))) then
+			local v206 = 0 + 0;
 			while true do
-				if (v131 == (1 - 0)) then
-					if (v128.KeyCode == Enum.KeyCode.C) then
-						local v219 = 0;
-						while true do
-							if ((0 + 0) == v219) then
-								v13.CursorLocked = not v13.CursorLocked;
-								if v13.CursorLocked then
-									v10.MouseBehavior = Enum.MouseBehavior.LockCenter;
-								else
-									v10.MouseBehavior = Enum.MouseBehavior.Default;
-								end
-								break;
-							end
-						end
-					end
+				if (v206 == (1 - 0)) then
+					v131 = workspace:WaitForChild(v7("\163\64\85\43\165\104", "\78\228\33\56")):WaitForChild(v7("\239\87\224", "\229\174\30\210\99"));
+					v125 = 1051 - (572 + 477);
 					break;
 				end
-				if (v131 == (1744 - (1344 + 400))) then
-					if v129 then
-						return;
-					end
-					if (v128.KeyCode == Enum.KeyCode.K) then
-						local v220 = 405 - (255 + 150);
+				if ((0 + 0) == v206) then
+					v129 = v128:WaitForChild(v7("\243\196\35\93\33\88\210\213\28\83\32\67\235\208\60\72", "\55\187\177\78\60\79"));
+					v130 = v128:WaitForChild(v7("\5\219\82\234\72\192\137\41", "\224\77\174\63\139\38\175"));
+					v206 = 1 + 0;
+				end
+			end
+		end
+		if (v125 == 5) then
+			if v137 then
+				local v230 = 0;
+				local v231;
+				while true do
+					if (v230 == (0 + 0)) then
+						v231 = 86 - (84 + 2);
 						while true do
-							if (v220 == 0) then
-								v13.Menu = not v13.Menu;
-								if v13.Menu then
-									v18.Visible = true;
-									v14:Create(v18, TweenInfo.new(0.45 + 0, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {[v7("\131\39\28\245\196\82\188\38", "\59\211\72\111\156\176")]=UDim2.new(0.5, -(174 + 151), 0.5, -(897 - 687)),[v7("\108\134\224\38\73\149\236\56\64\131\215\63\79\137\240\61\79\149\230\35\77\158", "\77\46\231\131")]=(0 - 0)}):Play();
-								else
-									local v244 = v14:Create(v18, TweenInfo.new(1739.45 - (404 + 1335), Enum.EasingStyle.Quart, Enum.EasingDirection.In), {[v7("\138\91\165\73\174\93\185\78", "\32\218\52\214")]=UDim2.new(0.5, -(731 - (183 + 223)), 1 - 0, 67 + 33),[v7("\108\22\50\163\246\162\74\79\64\19\5\186\240\190\86\74\79\5\52\166\242\169", "\58\46\119\81\200\145\208\37")]=(1 + 0)});
-									v244:Play();
-									v244.Completed:Connect(function()
-										v18.Visible = false;
-									end);
-								end
+							if (1 == v231) then
+								fireproximityprompt(v137);
 								break;
 							end
+							if (0 == v231) then
+								v137.RequiresLineOfSight = false;
+								v137.MaxActivationDistance = 30;
+								v231 = 1 - 0;
+							end
 						end
+						break;
 					end
-					v131 = 338 - (10 + 327);
+				end
+			end
+			while not v127:FindFirstChild(v7("\44\179\63\108\226\236\45\163\44\123", "\136\111\198\77\31\135")) do
+				task.wait(0.1 + 0);
+			end
+			v136 = false;
+			v125 = 848 - (497 + 345);
+		end
+		if (3 == v125) then
+			v135 = CFrame.new(-91.87533569335938, 73.0624771118164, -(16.64276123046875 + 608));
+			v136 = true;
+			v130.AutoRotate = false;
+			v125 = 1 + 3;
+		end
+		if (v125 == 2) then
+			local v208 = 0;
+			while true do
+				if (v208 == (1334 - (605 + 728))) then
+					v134 = 3 + 0;
+					v125 = 3;
+					break;
+				end
+				if (v208 == 0) then
+					v132 = v131:WaitForChild(v7("\51\248\139\80\227\50\48\31\223\137\94\249\13\56\9\249", "\89\123\141\230\49\141\93"));
+					v133 = 17 - 9;
+					v208 = 1;
+				end
+			end
+		end
+		if (v125 == (0 + 0)) then
+			v126 = game.Players.LocalPlayer;
+			v127 = v126:WaitForChild(v7("\166\192\3\178\47\48\203\143", "\168\228\161\96\217\95\81"));
+			v128 = v126.Character or v126.CharacterAdded:Wait();
+			v125 = 3 - 2;
+		end
+		if (v125 == 6) then
+			v130.AutoRotate = true;
+			v129.CFrame = v135;
+			break;
+		end
+		if (v125 == (4 + 0)) then
+			task.spawn(function()
+				while v136 do
+					local v232 = v132.CFrame;
+					local v233 = v232.Position - (v232.LookVector * v133);
+					v129.CFrame = CFrame.new(v233 + Vector3.new(0 - 0, v134, 0), v232.Position);
+					task.wait(0.03 + 0);
+				end
+			end);
+			task.wait(490 - (457 + 32));
+			v137 = v132:FindFirstChildWhichIsA(v7("\195\99\249\20\25\71\250\101\239\60\2\69\254\97\226", "\42\147\17\150\108\112"), true);
+			v125 = 3 + 2;
+		end
+	end
+end);
+v14:Button("Return Hiachi's Necklace", function()
+	local v138 = 1402 - (832 + 570);
+	local v139;
+	local v140;
+	local v141;
+	local v142;
+	local v143;
+	while true do
+		if (v138 == (2 + 0)) then
+			v140:PivotTo(v142.CFrame + Vector3.new(0 + 0, 10 - 7, 0));
+			v143 = v142:FindFirstChildWhichIsA(v7("\110\209\250\253\37\205\87\215\236\213\62\207\83\211\225", "\160\62\163\149\133\76"), true);
+			v138 = 2 + 1;
+		end
+		if (v138 == (796 - (588 + 208))) then
+			local v212 = 0 - 0;
+			while true do
+				if (v212 == (1800 - (884 + 916))) then
+					v139 = game.Players.LocalPlayer;
+					v140 = v139.Character or v139.CharacterAdded:Wait();
+					v212 = 1 - 0;
+				end
+				if (v212 == 1) then
+					v138 = 1;
+					break;
+				end
+			end
+		end
+		if (v138 == (1 + 0)) then
+			v141 = workspace:WaitForChild(v7("\44\57\132", "\201\98\105\199\54\221\132\119"));
+			v142 = v141:WaitForChild(v7("\145\25\142\32\12\58\165\189\62\140\46\22\5\173\171\24", "\204\217\108\227\65\98\85"));
+			v138 = 655 - (232 + 421);
+		end
+		if (v138 == (1892 - (1569 + 320))) then
+			if v143 then
+				local v235 = 0 + 0;
+				while true do
+					if (v235 == (0 + 0)) then
+						wait(1);
+						fireproximityprompt(v143);
+						break;
+					end
 				end
 			end
 			break;
 		end
 	end
 end);
-v11.RenderStepped:Connect(function()
-	if v13.CursorLocked then
-		v10.MouseBehavior = Enum.MouseBehavior.LockCenter;
-	else
-		v10.MouseBehavior = Enum.MouseBehavior.Default;
+v15:Divider(v7("\230\161\31\59\131\135", "\163\182\192\109\79"));
+v15:Button(v7("\21\51\20\207\246\59\43\16\204\240\32\35", "\149\84\70\96\160"), function()
+	local v144 = 0;
+	local v145;
+	local v146;
+	local v147;
+	local v148;
+	while true do
+		if (v144 == (3 - 2)) then
+			wait(0.5);
+			v147.CFrame = v148.CFrame + Vector3.new(605 - (316 + 289), 7 - 4, 0 + 0);
+			v145 = game.Players.LocalPlayer;
+			v146 = v145.Character or v145.CharacterAdded:Wait();
+			v144 = 1455 - (666 + 787);
+		end
+		if (v144 == (425 - (360 + 65))) then
+			v145 = game.Players.LocalPlayer;
+			v146 = v145.Character or v145.CharacterAdded:Wait();
+			v147 = v146:WaitForChild(v7("\16\19\0\236\54\9\4\233\10\9\2\249\8\7\31\249", "\141\88\102\109"));
+			v148 = workspace:WaitForChild(v7("\144\91\207\115\17\45\90\200\189\71", "\161\211\51\170\16\122\93\53"));
+			v144 = 1;
+		end
+		if (v144 == 2) then
+			v147 = v146:WaitForChild(v7("\211\187\191\41\245\161\187\44\201\161\189\60\203\175\160\60", "\72\155\206\210"));
+			v148 = workspace:WaitForChild(v7("\114\127\88\11\35\73\104\64\26", "\83\38\26\52\110"));
+			v147.CFrame = v148.CFrame + Vector3.new(0 + 0, 257 - (79 + 175), 0);
+			break;
+		end
 	end
 end);
-if queue_on_teleport then
-	queue_on_teleport([[
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/foreverhanakoo/hanako/refs/heads/main/themimicmemories"))()
-    ]]);
+v15:Divider(v7("\104\22\53\82\24\69", "\38\56\119\71"));
+v15:Button(v7("\210\250\76\217\38\89\254\255\84\211\49\83", "\54\147\143\56\182\69"), function()
+	local v149 = 0 - 0;
+	local v150;
+	local v151;
+	local v152;
+	while true do
+		if (v149 == (1 + 0)) then
+			v152 = v151:WaitForChild(v7("\254\148\242\72\209\217\136\251\123\208\217\149\207\72\205\194", "\191\182\225\159\41"));
+			v152.CFrame = CFrame.new(2513.805908203125 - 1693, 540.1578369140625 - 259, 1336.8390197753906 - (503 + 396));
+			break;
+		end
+		if (v149 == (181 - (92 + 89))) then
+			v150 = game.Players.LocalPlayer;
+			v151 = v150.Character or v150.CharacterAdded:Wait();
+			v149 = 1 - 0;
+		end
+	end
+end);
+v15:Divider(v7("\27\19\58\65\203\212", "\162\75\114\72\53\235\231"));
+v15:Button(v7("\173\41\80\237\80\13\129\44\72\231\71\7", "\98\236\92\36\130\51"), function()
+	local v153 = game.Players.LocalPlayer;
+	local v154 = v153.Character or v153.CharacterAdded:Wait();
+	local v155 = v154:WaitForChild(v7("\140\12\1\187\75\167\188\52\150\22\3\174\117\169\167\36", "\80\196\121\108\218\37\200\213"));
+	v155.CFrame = CFrame.new(1381.72998046875 + 1310, 5.062498569488525 + 2, 645.0728759765625);
+end);
+local v18 = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport);
+if v18 then
+	v18('loadstring(game:HttpGet("https://raw.githubusercontent.com/foreverhanakoo/hanako/refs/heads/main/themimicmemories"))()');
 end
